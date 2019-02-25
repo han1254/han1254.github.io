@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-25T15:39:22.321Z</updated>
+  <updated>2019-02-25T16:48:26.060Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Study to beauty my blog</title>
+    <link href="http://yoursite.com/2019/02/26/Study-to-beauty-my-blog/"/>
+    <id>http://yoursite.com/2019/02/26/Study-to-beauty-my-blog/</id>
+    <published>2019-02-25T16:23:24.000Z</published>
+    <updated>2019-02-25T16:48:26.060Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天呢，我又开始学习如何美化我的博客页面了<br><a id="more"></a><br>主要还是亏了这个教程  </p><h2 id="hexo的next主题个性化配置教程"><a href="#hexo的next主题个性化配置教程" class="headerlink" title="hexo的next主题个性化配置教程  "></a><a href="https://segmentfault.com/a/1190000009544924#articleHeader8" target="_blank" rel="noopener">hexo的next主题个性化配置教程 </a> </h2><p><em>在教程的帮助下</em></p><ul><li>我学会了如何换主题（其实早就换过(^u^) ）  </li><li>如何打开背景线条  </li><li>修改底部标签的图标  </li><li>每篇文章的结束提示  </li><li>包括通过试错得到的写标签的经验（冒号后要加空格，逗号后也要加空格）</li></ul><hr><p><em>但是也有遗憾</em></p><ul><li>头像没弄出来  </li><li>文章都是直接全文展示（现在学会了）  <blockquote><p>用<code>&lt;!--more--&gt;</code>表示只会显示标志前面的内容</p></blockquote></li><li>点击鼠标后的爱心图标无法实现 </li></ul><hr><p>所以，有空还得继续，加油！<br>最后还有几个教程  </p><ul><li><a href="https://www.bluelzy.com/articles/change_to_next_theme.html" target="_blank" rel="noopener">弃暗投明-Hexo更换next主题</a>  </li><li><a href="https://blog.csdn.net/wsmrzx/article/details/81478945" target="_blank" rel="noopener">Hexo撰写文章</a>  </li><li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天呢，我又开始学习如何美化我的博客页面了&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="study" scheme="http://yoursite.com/tags/study/"/>
+    
+      <category term="Web" scheme="http://yoursite.com/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>Test2</title>
@@ -68,16 +90,13 @@
     <link href="http://yoursite.com/2019/02/24/blog/"/>
     <id>http://yoursite.com/2019/02/24/blog/</id>
     <published>2019-02-24T14:52:47.000Z</published>
-    <updated>2019-02-24T14:53:36.340Z</updated>
+    <updated>2019-02-25T16:52:29.302Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Blog的搭建"><a href="#Blog的搭建" class="headerlink" title="Blog的搭建"></a>Blog的搭建</h1><h4 id="2019-2-24"><a href="#2019-2-24" class="headerlink" title="2019.2.24"></a>2019.2.24</h4><p><em>本文参考:</em><br><a href="https://blog.csdn.net/weixin_39879178/article/details/80319392" target="_blank" rel="noopener">2018.5月使用Github+Hexo搭建自己的博客</a> 　　</p><hr><p>&#160; &#160; &#160; &#160;今天下午，我突发奇想，想要自己搭建一个blog，自娱自乐一下。然鹅，能力不够啊，不知道该如何下手。于是百度又有了用武之地。<br>&#160; &#160; &#160; &#160;刚一开始我是茫然的，但在浏览了一会之后，我有点明白自己要干啥了。<br>&#160; &#160; &#160; &#160;具体过程我不叙述了，才刚开始学，还不太通。   </p><hr><h2 id="gt-gt-需要安装的东西"><a href="#gt-gt-需要安装的东西" class="headerlink" title="&gt;&gt;需要安装的东西"></a>&gt;&gt;需要安装的东西</h2><ol><li><strong>Hexo</strong> <blockquote><p>Hexo官网中说是这么描述的：A fast, simple &amp; powerful blog framework,即:一个快速、简单且强大的博客快速生产工具。它的简单体现在你完全有可能在30分钟内就生成属于你的个人博客。而它的强大体现在你对细节的调整上完全有可能花上一天的时间。  </p></blockquote></li></ol><ol start="2"><li><strong>环境配置</strong></li></ol><ul><li>node.js  <blockquote><p>Node.js 的实质是一个JavaScript运行环境,这里我们主要使用它来生成我们博客的静态页面。从官网下载最新的安装包进行默认安装就好。  </p></blockquote></li><li><p>git  </p><blockquote><p>git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可<br><a href="git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可">git教程</a>&lt;|click here|</p></blockquote></li><li><p>注册github<br>略  </p><h2 id="gt-gt-实战中的问题"><a href="#gt-gt-实战中的问题" class="headerlink" title="&gt;&gt;实战中的问题"></a>&gt;&gt;实战中的问题</h2></li></ul><ol><li><strong>生成SSH密钥设置到Github</strong><br><img src="https://img-blog.csdn.net/20180515114454455?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="密匙"><br><em>解决方法：我就按照他的做了两遍就成了</em>       </li></ol><ol start="2"><li><strong>预览博客</strong><br>不能让语句停止运行<br><img src="https://img-blog.csdn.net/20180515120326444?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt><br><em>如上图，不能让它stop</em>  </li></ol><ol start="3"><li><strong>大于hexo 3.0的上传到github的方法</strong><br>他这里用的是.deploy_git文件，我的电脑上没有，所以我更改的是.config.yml文件<br><img src="https://img-blog.csdn.net/2018051512195954" alt>  </li><li><strong>将gitbash部署hexo到github</strong><br><code>hexo deploy</code>  </li></ol><ul><li>遇到的第一个问题就是：<code>hexo s</code>后报错：<br><img src="http://note.youdao.com/noteshare?id=27c7a67a6d850c44713ac589704f1865" alt><br><em>原来是我之前把.config.yml文件里的repo按照他的也改了，其实不用改</em> </li><li>第二个就是：<code>fatal: unable to auto-detect email address (got &#39;Yang@yyw.(none)&#39;)</code>;<br>然后百度之后，解决 ：<br><code>$ git config --global user.email &quot;you@example.com&quot;</code><br><code>$ git config --local -l 查看本地配置</code><br><a href="http://www.voidcn.com/article/p-twicxjaq-ro.html" target="_blank" rel="noopener">原文链接</a><br>最后附上我的博客链接   <a href="https://han1254.github.io/" target="_blank" rel="noopener">Jone Doe</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Blog的搭建"><a href="#Blog的搭建" class="headerlink" title="Blog的搭建"></a>Blog的搭建</h1><h4 id="2019-2-24"><a href="#2019-2-24" class="headerlink" title="2019.2.24"></a>2019.2.24</h4><a id="more"></a>  <p><em>本文参考:</em><br><a href="https://blog.csdn.net/weixin_39879178/article/details/80319392" target="_blank" rel="noopener">2018.5月使用Github+Hexo搭建自己的博客</a> 　　</p><hr><p>&#160; &#160; &#160; &#160;今天下午，我突发奇想，想要自己搭建一个blog，自娱自乐一下。然鹅，能力不够啊，不知道该如何下手。于是百度又有了用武之地。<br>&#160; &#160; &#160; &#160;刚一开始我是茫然的，但在浏览了一会之后，我有点明白自己要干啥了。<br>&#160; &#160; &#160; &#160;具体过程我不叙述了，才刚开始学，还不太通。   </p><hr><h2 id="gt-gt-需要安装的东西"><a href="#gt-gt-需要安装的东西" class="headerlink" title="&gt;&gt;需要安装的东西"></a>&gt;&gt;需要安装的东西</h2><ol><li><strong>Hexo</strong> <blockquote><p>Hexo官网中说是这么描述的：A fast, simple &amp; powerful blog framework,即:一个快速、简单且强大的博客快速生产工具。它的简单体现在你完全有可能在30分钟内就生成属于你的个人博客。而它的强大体现在你对细节的调整上完全有可能花上一天的时间。  </p></blockquote></li></ol><ol start="2"><li><strong>环境配置</strong></li></ol><ul><li>node.js  <blockquote><p>Node.js 的实质是一个JavaScript运行环境,这里我们主要使用它来生成我们博客的静态页面。从官网下载最新的安装包进行默认安装就好。  </p></blockquote></li><li><p>git  </p><blockquote><p>git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可<br><a href="git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可">git教程</a>&lt;|click here|</p></blockquote></li><li><p>注册github<br>略  </p><h2 id="gt-gt-实战中的问题"><a href="#gt-gt-实战中的问题" class="headerlink" title="&gt;&gt;实战中的问题"></a>&gt;&gt;实战中的问题</h2></li></ul><ol><li><strong>生成SSH密钥设置到Github</strong><br><img src="https://img-blog.csdn.net/20180515114454455?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="密匙"><br><em>解决方法：我就按照他的做了两遍就成了</em>       </li></ol><ol start="2"><li><strong>预览博客</strong><br>不能让语句停止运行<br><img src="https://img-blog.csdn.net/20180515120326444?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt><br><em>如上图，不能让它stop</em>  </li></ol><ol start="3"><li><strong>大于hexo 3.0的上传到github的方法</strong><br>他这里用的是.deploy_git文件，我的电脑上没有，所以我更改的是.config.yml文件<br><img src="https://img-blog.csdn.net/2018051512195954" alt>  </li><li><strong>将gitbash部署hexo到github</strong><br><code>hexo deploy</code>  </li></ol><ul><li>遇到的第一个问题就是：<code>hexo s</code>后报错：<br><img src="http://note.youdao.com/noteshare?id=27c7a67a6d850c44713ac589704f1865" alt><br><em>原来是我之前把.config.yml文件里的repo按照他的也改了，其实不用改</em> </li><li>第二个就是：<code>fatal: unable to auto-detect email address (got &#39;Yang@yyw.(none)&#39;)</code>;<br>然后百度之后，解决 ：<br><code>$ git config --global user.email &quot;you@example.com&quot;</code><br><code>$ git config --local -l 查看本地配置</code><br><a href="http://www.voidcn.com/article/p-twicxjaq-ro.html" target="_blank" rel="noopener">原文链接</a><br>最后附上我的博客链接   <a href="https://han1254.github.io/" target="_blank" rel="noopener">Jone Doe</a></li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;Blog的搭建&quot;&gt;&lt;a href=&quot;#Blog的搭建&quot; class=&quot;headerlink&quot; title=&quot;Blog的搭建&quot;&gt;&lt;/a&gt;Blog的搭建&lt;/h1&gt;&lt;h4 id=&quot;2019-2-24&quot;&gt;&lt;a href=&quot;#2019-2-24&quot; class=&quot;header
-      
+      &lt;h1 id=&quot;Blog的搭建&quot;&gt;&lt;a href=&quot;#Blog的搭建&quot; class=&quot;headerlink&quot; title=&quot;Blog的搭建&quot;&gt;&lt;/a&gt;Blog的搭建&lt;/h1&gt;&lt;h4 id=&quot;2019-2-24&quot;&gt;&lt;a href=&quot;#2019-2-24&quot; class=&quot;headerlink&quot; title=&quot;2019.2.24&quot;&gt;&lt;/a&gt;2019.2.24&lt;/h4&gt;
     
     </summary>
     
