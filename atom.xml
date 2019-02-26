@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-25T16:48:26.060Z</updated>
+  <updated>2019-02-26T12:24:18.040Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidNote-1</title>
+    <link href="http://yoursite.com/2019/02/26/AndroidNote-1/"/>
+    <id>http://yoursite.com/2019/02/26/AndroidNote-1/</id>
+    <published>2019-02-26T06:48:50.000Z</published>
+    <updated>2019-02-26T12:24:18.040Z</updated>
+    
+    <content type="html"><![CDATA[<p>前几天由于博客没搭建好，一直也没动手写自己的学习过程，现在博客能用了，可以写一下自己学到的那一丢丢知识了<br><a id="more"></a></p><ul><li>首先是下载AS，然后配置sdk啥的，网上的教程很多。  </li><li>接下来阅读《第一行代码》，在它的带领下，我开始了解了关于Adroid的一些基本概念，四大组件啦，文档结构啦，下面就是我根据基础知识做的一个思维导图：<br><img src="/2019/02/26/AndroidNote-1/mind.png" alt="基础知识">  </li><li>然后呢，当我热情满满地打开AS，创建项目，设置虚拟机，好顺利，正当我暗自窃喜的时候，我点击运行，妈呀，找不到设备。（具体截图我没有了）<br>后来一查，极有可能是由于电脑的虚拟化没开启<blockquote><p>BIOS里开启虚拟化的步骤：<br>1.开机按DEL，进入BIOS；<br>2.BIOS中依次选择：Advanced（高级）——CPU Configuration——Secure Virtual Machine，设置为：Enabled（启用）就行了。<br>3.不过BIOS中默认是开启的，因此不需要手动开启。  </p></blockquote></li></ul><p>但是我的电脑就是打不开bios,估计是需要用U盘，所以我果断选择用了真机。<br>步骤是这样的：  </p><ol><li>安装USB驱动设备 下面有教程<br><a href="https://blog.csdn.net/a594695686/article/details/53467287" target="_blank" rel="noopener">解决AndroidStudio连不上Android设备真机的问题</a>   </li><li>选择Target <img src="/2019/02/26/AndroidNote-1/Edit.png" alt><br><img src="/2019/02/26/AndroidNote-1/target.png" alt>  </li><li>打开手机-&gt;usb调试，开发者选项-&gt;电脑上设备管理器-&gt;更新驱动设备  </li><li>接下来估计就可以连上了。   </li><li>但是也有意外，如果adb接口被占了，文件也就没法编译，也连不上手机（在写这个文章的时候我正好又遇见这个情况，吓我一跳，直接在任务管理器关了比如 <strong><em>360手机助手</em></strong> 这种东西  </li></ol><ul><li>然后就差不多了。点击运行，app会直接安装到手机上，我第一次安装的光闪退，后来又新建了一个项目，直接能在手机上运行了<br><img src="/2019/02/26/AndroidNote-1/app.png" alt>  </li></ul><p><img src="/2019/02/26/AndroidNote-1/view.jpg" alt>    </p><ul><li>接下来我又按照《第一行代码》上的教程，做了另一个app<br><img src="/2019/02/26/AndroidNote-1/app2.png" alt>  </li><li>在这个基础上，我学习了如何创建主活动，添加按钮，如何在点击按钮后产生提示，如何添加新活动，如何在活动之间传递信息，添加菜单，拨打电话等等技术。  </li></ul><p><img src="/2019/02/26/AndroidNote-1/1.jpg" alt>    </p><p><img src="/2019/02/26/AndroidNote-1/2.jpg" alt>   </p><p><img src="/2019/02/26/AndroidNote-1/3.jpg" alt>   </p><p><img src="/2019/02/26/AndroidNote-1/4.jpg" alt>    </p><p><img src="/2019/02/26/AndroidNote-1/5.png" alt>   </p><p>但是这些学到的还只是皮毛，根本不能实战，所以，还需要继续研究书籍，多看教程，多写多练。  </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几天由于博客没搭建好，一直也没动手写自己的学习过程，现在博客能用了，可以写一下自己学到的那一丢丢知识了&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>Study to beauty my blog</title>
@@ -27,7 +49,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;今天呢，我又开始学习如何美化我的博客页面了&lt;br&gt;
+      &lt;p&gt;今天呢，我又开始学习如何美化我的博客页面了&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
