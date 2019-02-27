@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-27T12:52:18.265Z</updated>
+  <updated>2019-02-27T14:47:50.969Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Javva-继承与派生</title>
+    <title>Java-继承与派生</title>
     <link href="http://yoursite.com/2019/02/27/Java-%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/"/>
     <id>http://yoursite.com/2019/02/27/Java-继承与派生/</id>
     <published>2019-02-27T12:52:18.000Z</published>
-    <updated>2019-02-27T12:52:18.265Z</updated>
+    <updated>2019-02-27T14:47:50.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于Java的学习，我现在主要是在B站的<a href="https://www.bilibili.com/video/av37316788/?p=32" target="_blank" rel="noopener">【SiKi学院JavaEE】Java编程学习</a><br><a id="more"></a><br>今天呢，我已经学习到继承与派生。关键知识点有：  </p><ol><li><strong>继承关键字</strong><br><code>extends</code>   <h2 id><a href="#" class="headerlink" title="  "></a><img src="/2019/02/27/Java-继承与派生/继承.png" alt>  </h2></li><li><strong>父类里的私有成员</strong><br>需要用父类里的公有成员函数进行访问和赋值修改。  </li></ol><hr><ol start="3"><li><strong>父类的构造方法调用</strong>  </li></ol><ul><li>利用super方法，如下图：<br><img src="/2019/02/27/Java-继承与派生/父类.png" alt><br><img src="/2019/02/27/Java-继承与派生/父类的构造调用.png" alt> </li><li>子类调用无参的构造方法时，父类如果存在有参的构造方法，必须也得有无参构造方法。  </li><li>调用其他构造方法<br><img src="/2019/02/27/Java-继承与派生/调用其他构造.png" alt><br><img src="/2019/02/27/Java-继承与派生/this调用构造-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/this调用2-1.png" alt>  <h2 id="注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。"><a href="#注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。" class="headerlink" title="注意：通过 this和 super调用其他构造方法的时候，必须在第一条语句。"></a><strong><em>注意</em></strong>：<em>通过 this和 super调用其他构造方法的时候，必须在第一条语句。</em></h2></li></ul><ol start="4"><li><strong>继承的特点</strong><br>Java支持单继承但不支持多继承。</li></ol><hr><ol start="5"><li><strong>就近原则</strong><br><img src="/2019/02/27/Java-继承与派生/4.png" alt><br><img src="/2019/02/27/Java-继承与派生/1-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/2-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/3-1.png" alt></li></ol><hr><ol start="6"><li><strong>overload,override,final</strong><br><img src="/2019/02/27/Java-继承与派生/6.png" alt><br><strong><em>注意</em></strong>：<em>final在修饰方法的时候，要跟在权限的后面</em><br>例如：<code>public final void eat()</code></li></ol><hr><p>接下来就是技术推广时间～(￣▽￣～)   (～￣▽￣)～  </p><hr><p> <strong>**小技巧：</strong>/(@0_0@)/ LittleTips*<em>:<br>[<code>Ctrl+shift+k</code> </em>取消注释* ]</p><hr><p>&lt;(￣ˇ￣)/债见！</p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;对于Java的学习，我现在主要是在B站的&lt;a href=&quot;https://www.bilibili.com/video/av37316788/?p=32&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;【SiKi学院JavaEE】Java编程学习&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+    
     </summary>
     
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+      <category term="面向对象" scheme="http://yoursite.com/categories/Java/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -35,7 +45,7 @@
     <link href="http://yoursite.com/2019/02/26/AndroidNote-1/"/>
     <id>http://yoursite.com/2019/02/26/AndroidNote-1/</id>
     <published>2019-02-26T06:48:50.000Z</published>
-    <updated>2019-02-26T12:24:18.040Z</updated>
+    <updated>2019-02-27T14:48:35.929Z</updated>
     
     <content type="html"><![CDATA[<p>前几天由于博客没搭建好，一直也没动手写自己的学习过程，现在博客能用了，可以写一下自己学到的那一丢丢知识了<br><a id="more"></a></p><ul><li>首先是下载AS，然后配置sdk啥的，网上的教程很多。  </li><li>接下来阅读《第一行代码》，在它的带领下，我开始了解了关于Adroid的一些基本概念，四大组件啦，文档结构啦，下面就是我根据基础知识做的一个思维导图：<br><img src="/2019/02/26/AndroidNote-1/mind.png" alt="基础知识">  </li><li>然后呢，当我热情满满地打开AS，创建项目，设置虚拟机，好顺利，正当我暗自窃喜的时候，我点击运行，妈呀，找不到设备。（具体截图我没有了）<br>后来一查，极有可能是由于电脑的虚拟化没开启<blockquote><p>BIOS里开启虚拟化的步骤：<br>1.开机按DEL，进入BIOS；<br>2.BIOS中依次选择：Advanced（高级）——CPU Configuration——Secure Virtual Machine，设置为：Enabled（启用）就行了。<br>3.不过BIOS中默认是开启的，因此不需要手动开启。  </p></blockquote></li></ul><p>但是我的电脑就是打不开bios,估计是需要用U盘，所以我果断选择用了真机。<br>步骤是这样的：  </p><ol><li>安装USB驱动设备 下面有教程<br><a href="https://blog.csdn.net/a594695686/article/details/53467287" target="_blank" rel="noopener">解决AndroidStudio连不上Android设备真机的问题</a>   </li><li>选择Target <img src="/2019/02/26/AndroidNote-1/Edit.png" alt><br><img src="/2019/02/26/AndroidNote-1/target.png" alt>  </li><li>打开手机-&gt;usb调试，开发者选项-&gt;电脑上设备管理器-&gt;更新驱动设备  </li><li>接下来估计就可以连上了。   </li><li>但是也有意外，如果adb接口被占了，文件也就没法编译，也连不上手机（在写这个文章的时候我正好又遇见这个情况，吓我一跳，直接在任务管理器关了比如 <strong><em>360手机助手</em></strong> 这种东西  </li></ol><ul><li>然后就差不多了。点击运行，app会直接安装到手机上，我第一次安装的光闪退，后来又新建了一个项目，直接能在手机上运行了<br><img src="/2019/02/26/AndroidNote-1/app.png" alt>  </li></ul><p><img src="/2019/02/26/AndroidNote-1/view.jpg" alt>    </p><ul><li>接下来我又按照《第一行代码》上的教程，做了另一个app<br><img src="/2019/02/26/AndroidNote-1/app2.png" alt>  </li><li>在这个基础上，我学习了如何创建主活动，添加按钮，如何在点击按钮后产生提示，如何添加新活动，如何在活动之间传递信息，添加菜单，拨打电话等等技术。  </li></ul><p><img src="/2019/02/26/AndroidNote-1/1.jpg" alt>    </p><p><img src="/2019/02/26/AndroidNote-1/2.jpg" alt>   </p><p><img src="/2019/02/26/AndroidNote-1/3.jpg" alt>   </p><p><img src="/2019/02/26/AndroidNote-1/4.jpg" alt>    </p><p><img src="/2019/02/26/AndroidNote-1/5.png" alt>   </p><p>但是这些学到的还只是皮毛，根本不能实战，所以，还需要继续研究书籍，多看教程，多写多练。  </p>]]></content>
     
@@ -44,6 +54,8 @@
       &lt;p&gt;前几天由于博客没搭建好，一直也没动手写自己的学习过程，现在博客能用了，可以写一下自己学到的那一丢丢知识了&lt;br&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
     
       <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
@@ -57,7 +69,7 @@
     <link href="http://yoursite.com/2019/02/26/Study-to-beauty-my-blog/"/>
     <id>http://yoursite.com/2019/02/26/Study-to-beauty-my-blog/</id>
     <published>2019-02-25T16:23:24.000Z</published>
-    <updated>2019-02-25T16:48:26.060Z</updated>
+    <updated>2019-02-27T14:50:16.644Z</updated>
     
     <content type="html"><![CDATA[<p>今天呢，我又开始学习如何美化我的博客页面了<br><a id="more"></a><br>主要还是亏了这个教程  </p><h2 id="hexo的next主题个性化配置教程"><a href="#hexo的next主题个性化配置教程" class="headerlink" title="hexo的next主题个性化配置教程  "></a><a href="https://segmentfault.com/a/1190000009544924#articleHeader8" target="_blank" rel="noopener">hexo的next主题个性化配置教程 </a> </h2><p><em>在教程的帮助下</em></p><ul><li>我学会了如何换主题（其实早就换过(^u^) ）  </li><li>如何打开背景线条  </li><li>修改底部标签的图标  </li><li>每篇文章的结束提示  </li><li>包括通过试错得到的写标签的经验（冒号后要加空格，逗号后也要加空格）</li></ul><hr><p><em>但是也有遗憾</em></p><ul><li>头像没弄出来  </li><li>文章都是直接全文展示（现在学会了）  <blockquote><p>用<code>&lt;!--more--&gt;</code>表示只会显示标志前面的内容</p></blockquote></li><li>点击鼠标后的爱心图标无法实现 </li></ul><hr><p>所以，有空还得继续，加油！<br>最后还有几个教程  </p><ul><li><a href="https://www.bluelzy.com/articles/change_to_next_theme.html" target="_blank" rel="noopener">弃暗投明-Hexo更换next主题</a>  </li><li><a href="https://blog.csdn.net/wsmrzx/article/details/81478945" target="_blank" rel="noopener">Hexo撰写文章</a>  </li><li><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">Hexo的Next主题详细配置</a></li></ul>]]></content>
     
@@ -67,6 +79,8 @@
     
     </summary>
     
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
     
       <category term="study" scheme="http://yoursite.com/tags/study/"/>
     
@@ -75,58 +89,11 @@
   </entry>
   
   <entry>
-    <title>Test2</title>
-    <link href="http://yoursite.com/2019/02/25/Test2/"/>
-    <id>http://yoursite.com/2019/02/25/Test2/</id>
-    <published>2019-02-25T15:32:27.000Z</published>
-    <updated>2019-02-25T15:39:22.321Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="我觉得应该可以"><a href="#我觉得应该可以" class="headerlink" title="我觉得应该可以"></a>我觉得应该可以</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;我觉得应该可以&quot;&gt;&lt;a href=&quot;#我觉得应该可以&quot; class=&quot;headerlink&quot; title=&quot;我觉得应该可以&quot;&gt;&lt;/a&gt;我觉得应该可以&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-      <category term="c++" scheme="http://yoursite.com/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Test</title>
-    <link href="http://yoursite.com/2019/02/25/Test/"/>
-    <id>http://yoursite.com/2019/02/25/Test/</id>
-    <published>2019-02-25T14:13:46.000Z</published>
-    <updated>2019-02-25T14:15:08.222Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>我就是看看怎么传文章，怕自己忘记了</em></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;em&gt;我就是看看怎么传文章，怕自己忘记了&lt;/em&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>blog</title>
     <link href="http://yoursite.com/2019/02/24/blog/"/>
     <id>http://yoursite.com/2019/02/24/blog/</id>
     <published>2019-02-24T14:52:47.000Z</published>
-    <updated>2019-02-25T16:52:29.302Z</updated>
+    <updated>2019-02-27T14:49:16.993Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Blog的搭建"><a href="#Blog的搭建" class="headerlink" title="Blog的搭建"></a>Blog的搭建</h1><h4 id="2019-2-24"><a href="#2019-2-24" class="headerlink" title="2019.2.24"></a>2019.2.24</h4><a id="more"></a>  <p><em>本文参考:</em><br><a href="https://blog.csdn.net/weixin_39879178/article/details/80319392" target="_blank" rel="noopener">2018.5月使用Github+Hexo搭建自己的博客</a> 　　</p><hr><p>&#160; &#160; &#160; &#160;今天下午，我突发奇想，想要自己搭建一个blog，自娱自乐一下。然鹅，能力不够啊，不知道该如何下手。于是百度又有了用武之地。<br>&#160; &#160; &#160; &#160;刚一开始我是茫然的，但在浏览了一会之后，我有点明白自己要干啥了。<br>&#160; &#160; &#160; &#160;具体过程我不叙述了，才刚开始学，还不太通。   </p><hr><h2 id="gt-gt-需要安装的东西"><a href="#gt-gt-需要安装的东西" class="headerlink" title="&gt;&gt;需要安装的东西"></a>&gt;&gt;需要安装的东西</h2><ol><li><strong>Hexo</strong> <blockquote><p>Hexo官网中说是这么描述的：A fast, simple &amp; powerful blog framework,即:一个快速、简单且强大的博客快速生产工具。它的简单体现在你完全有可能在30分钟内就生成属于你的个人博客。而它的强大体现在你对细节的调整上完全有可能花上一天的时间。  </p></blockquote></li></ol><ol start="2"><li><strong>环境配置</strong></li></ol><ul><li>node.js  <blockquote><p>Node.js 的实质是一个JavaScript运行环境,这里我们主要使用它来生成我们博客的静态页面。从官网下载最新的安装包进行默认安装就好。  </p></blockquote></li><li><p>git  </p><blockquote><p>git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可<br><a href="git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可">git教程</a>&lt;|click here|</p></blockquote></li><li><p>注册github<br>略  </p><h2 id="gt-gt-实战中的问题"><a href="#gt-gt-实战中的问题" class="headerlink" title="&gt;&gt;实战中的问题"></a>&gt;&gt;实战中的问题</h2></li></ul><ol><li><strong>生成SSH密钥设置到Github</strong><br><img src="https://img-blog.csdn.net/20180515114454455?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="密匙"><br><em>解决方法：我就按照他的做了两遍就成了</em>       </li></ol><ol start="2"><li><strong>预览博客</strong><br>不能让语句停止运行<br><img src="https://img-blog.csdn.net/20180515120326444?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTg3OTE3OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt><br><em>如上图，不能让它stop</em>  </li></ol><ol start="3"><li><strong>大于hexo 3.0的上传到github的方法</strong><br>他这里用的是.deploy_git文件，我的电脑上没有，所以我更改的是.config.yml文件<br><img src="https://img-blog.csdn.net/2018051512195954" alt>  </li><li><strong>将gitbash部署hexo到github</strong><br><code>hexo deploy</code>  </li></ol><ul><li>遇到的第一个问题就是：<code>hexo s</code>后报错：<br><img src="http://note.youdao.com/noteshare?id=27c7a67a6d850c44713ac589704f1865" alt><br><em>原来是我之前把.config.yml文件里的repo按照他的也改了，其实不用改</em> </li><li>第二个就是：<code>fatal: unable to auto-detect email address (got &#39;Yang@yyw.(none)&#39;)</code>;<br>然后百度之后，解决 ：<br><code>$ git config --global user.email &quot;you@example.com&quot;</code><br><code>$ git config --local -l 查看本地配置</code><br><a href="http://www.voidcn.com/article/p-twicxjaq-ro.html" target="_blank" rel="noopener">原文链接</a><br>最后附上我的博客链接   <a href="https://han1254.github.io/" target="_blank" rel="noopener">Jone Doe</a></li></ul>]]></content>
     
@@ -136,6 +103,10 @@
     
     </summary>
     
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
     
   </entry>
   
@@ -144,16 +115,13 @@
     <link href="http://yoursite.com/2019/02/24/hello-world/"/>
     <id>http://yoursite.com/2019/02/24/hello-world/</id>
     <published>2019-02-24T08:33:38.862Z</published>
-    <updated>2019-02-24T08:33:38.863Z</updated>
+    <updated>2019-02-27T14:56:09.399Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a>    </p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;&lt;/p&gt;
     
     </summary>
     

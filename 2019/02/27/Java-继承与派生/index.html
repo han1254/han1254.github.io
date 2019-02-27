@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Java,">
 
 
 
@@ -81,14 +81,30 @@
 
 
 
+<meta name="description" content="对于Java的学习，我现在主要是在B站的【SiKi学院JavaEE】Java编程学习">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javva-继承与派生">
+<meta property="og:title" content="Java-继承与派生">
 <meta property="og:url" content="http://yoursite.com/2019/02/27/Java-继承与派生/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="对于Java的学习，我现在主要是在B站的【SiKi学院JavaEE】Java编程学习">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-27T12:52:18.265Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/继承.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/父类.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/父类的构造调用.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/调用其他构造.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/this调用构造-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/this调用2-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/1-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/2-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/3-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/6.png">
+<meta property="og:updated_time" content="2019-02-27T14:47:50.969Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javva-继承与派生">
+<meta name="twitter:title" content="Java-继承与派生">
+<meta name="twitter:description" content="对于Java的学习，我现在主要是在B站的【SiKi学院JavaEE】Java编程学习">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/27/Java-继承与派生/继承.png">
 
 
 
@@ -124,7 +140,7 @@
 
 
 
-  <title>Javva-继承与派生 | Hexo</title>
+  <title>Java-继承与派生 | Hexo</title>
   
 
 
@@ -190,12 +206,52 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
           </a>
         </li>
       
@@ -249,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Javva-继承与派生</h1>
+          <h1 class="post-title" itemprop="name headline">Java-继承与派生</h1>
         
 
         <div class="post-meta">
@@ -271,6 +327,39 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/面向对象/" itemprop="url" rel="index">
+                    <span itemprop="name">面向对象</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -299,7 +388,38 @@
       
 
       
-        
+        <p>对于Java的学习，我现在主要是在B站的<a href="https://www.bilibili.com/video/av37316788/?p=32" target="_blank" rel="noopener">【SiKi学院JavaEE】Java编程学习</a><br><a id="more"></a><br>今天呢，我已经学习到继承与派生。关键知识点有：  </p>
+<ol>
+<li><strong>继承关键字</strong><br><code>extends</code>   <h2 id><a href="#" class="headerlink" title="  "></a><img src="/2019/02/27/Java-继承与派生/继承.png" alt>  </h2></li>
+<li><strong>父类里的私有成员</strong><br>需要用父类里的公有成员函数进行访问和赋值修改。  </li>
+</ol>
+<hr>
+<ol start="3">
+<li><strong>父类的构造方法调用</strong>  </li>
+</ol>
+<ul>
+<li>利用super方法，如下图：<br><img src="/2019/02/27/Java-继承与派生/父类.png" alt><br><img src="/2019/02/27/Java-继承与派生/父类的构造调用.png" alt> </li>
+<li>子类调用无参的构造方法时，父类如果存在有参的构造方法，必须也得有无参构造方法。  </li>
+<li>调用其他构造方法<br><img src="/2019/02/27/Java-继承与派生/调用其他构造.png" alt><br><img src="/2019/02/27/Java-继承与派生/this调用构造-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/this调用2-1.png" alt>  <h2 id="注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。"><a href="#注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。" class="headerlink" title="注意：通过 this和 super调用其他构造方法的时候，必须在第一条语句。"></a><strong><em>注意</em></strong>：<em>通过 this和 super调用其他构造方法的时候，必须在第一条语句。</em></h2></li>
+</ul>
+<ol start="4">
+<li><strong>继承的特点</strong><br>Java支持单继承但不支持多继承。</li>
+</ol>
+<hr>
+<ol start="5">
+<li><strong>就近原则</strong><br><img src="/2019/02/27/Java-继承与派生/4.png" alt><br><img src="/2019/02/27/Java-继承与派生/1-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/2-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/3-1.png" alt></li>
+</ol>
+<hr>
+<ol start="6">
+<li><strong>overload,override,final</strong><br><img src="/2019/02/27/Java-继承与派生/6.png" alt><br><strong><em>注意</em></strong>：<em>final在修饰方法的时候，要跟在权限的后面</em><br>例如：<code>public final void eat()</code></li>
+</ol>
+<hr>
+<p>接下来就是技术推广时间～(￣▽￣～)   (～￣▽￣)～  </p>
+<hr>
+<p> <strong>**小技巧：</strong>/(@0_0@)/ LittleTips*<em>:<br>[<code>Ctrl+shift+k</code> </em>取消注释* ]</p>
+<hr>
+<p>&lt;(￣ˇ￣)/债见！</p>
+
       
     </div>
     
@@ -324,6 +444,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
       
 
       
@@ -394,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -410,12 +545,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             
@@ -453,6 +597,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">  </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。"><span class="nav-number">2.</span> <span class="nav-text">注意：通过 this和 super调用其他构造方法的时候，必须在第一条语句。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
