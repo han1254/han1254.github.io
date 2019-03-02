@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-01T15:50:09.407Z</updated>
+  <updated>2019-03-02T02:12:48.076Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog-4</title>
+    <link href="http://yoursite.com/2019/03/02/blog-4/"/>
+    <id>http://yoursite.com/2019/03/02/blog-4/</id>
+    <published>2019-03-02T01:56:12.000Z</published>
+    <updated>2019-03-02T02:12:48.076Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-github搭建的博客部分图片无法显示"><a href="#Hexo-github搭建的博客部分图片无法显示" class="headerlink" title="Hexo+github搭建的博客部分图片无法显示"></a>Hexo+github搭建的博客部分图片无法显示</h1><a id="more"></a><p>这个问题我已经发现好长时间了，昨天脑子一抽，看了一下那些无法显示的图片再源文件里的地址，发现——它的拓展名跟文件夹里的不一样。文件夹里的是<code>PNG</code>，但再markdown文件里是<code>png</code>，但是VScode太智能了，竟然没有发现，照常能预览 (╯￣Д￣)╯ ┻━┻    </p><ul><li><p>如果我这样<br><img src="/2019/03/02/blog-4/1.PNG" alt><br>最后的结果就会是这样<br><img src="/2019/03/02/blog-4/1.png" alt>    </p></li><li><p>如果我这样<br><img src="/2019/03/02/blog-4/2.PNG" alt><br>就能正常显示了<br><img src="/2019/03/02/blog-4/继承.PNG" alt> </p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Hexo-github搭建的博客部分图片无法显示&quot;&gt;&lt;a href=&quot;#Hexo-github搭建的博客部分图片无法显示&quot; class=&quot;headerlink&quot; title=&quot;Hexo+github搭建的博客部分图片无法显示&quot;&gt;&lt;/a&gt;Hexo+github搭建的博客部分图片无法显示&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>Android-活动的生命周期</title>
