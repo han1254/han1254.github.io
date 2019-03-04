@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-02T14:32:39.222Z</updated>
+  <updated>2019-03-04T08:32:42.266Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PTA-科学计数法</title>
+    <link href="http://yoursite.com/2019/03/04/PTA-%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/03/04/PTA-科学计数法/</id>
+    <published>2019-03-04T05:05:15.000Z</published>
+    <updated>2019-03-04T08:32:42.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>题目要求：</strong><br>科学计数法是科学家用来表示很大或很小的数字的一种方便的方法，其满足正则表  达式<br><code>[+-][1-9].[0-9]+E[+-][0-9]+</code>，<br>即数字的整数部分只有 1 位，小数部分至少有 1 位，该数字及其指数部分的正负号即使对正数也必定明确给出。<br>现以科学计数法的格式给出实数 A，请编写程序按普通数字表示法输出 A，并保证所有有效位都被保留。<br><a id="more"></a><br>输入格式：<br>每个输入包含 1 个测试用例，即一个以科学计数法表示的实数 A。该数字的存储长度不超过 9999 字节，且其指数的绝对值不超过 9999。<br>输出格式：<br>对每个测试用例，在一行中按普通数字表示法输出 A，并保证所有有效位都被保留，包括末尾的 0。<br>输入样例 1：<br><code>+1.23400E-03</code><br>输出样例 1：<br><code>0.00123400</code><br>输入样例 2：<br><code>-1.2E+10</code><br>输出样例 2：<br><code>-12000000000</code><br><strong>我的代码：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class Main &#123;</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">&#123;</span><br><span class="line">Scanner t=new Scanner(System.in);</span><br><span class="line">String s=t.next();</span><br><span class="line">String[] d = s.split(&quot;[.E]&quot;);</span><br><span class="line">t.close();</span><br><span class="line">int ex = Integer.parseInt(d[2]);//E后面的数（即整数），转化成整数</span><br><span class="line">int in = Integer.parseInt(d[0]);//小数点前的数，转化成整数</span><br><span class="line">if(ex&gt;=0)//指数大于零</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(in);</span><br><span class="line">boolean h=false;//判断新数是不是有小数点</span><br><span class="line">if(ex&lt;d[1].length())//指数小于小数位数的时候</span><br><span class="line">&#123;</span><br><span class="line">h=true;</span><br><span class="line">&#125;</span><br><span class="line">int i;</span><br><span class="line">for(i=0;i&lt;d[1].length()&amp;&amp;ex&gt;0;i++,ex--)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(d[1].charAt(i));</span><br><span class="line">&#125;</span><br><span class="line">if(h)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(&quot;.&quot;);</span><br><span class="line">for(;i&lt;d[i].length();i++)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(d[i].charAt(i));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">while(ex!=0)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(0);</span><br><span class="line">ex--;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">else//指数小于零</span><br><span class="line">&#123;</span><br><span class="line">if(in&lt;0)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(&quot;-&quot;);</span><br><span class="line">in=-in;</span><br><span class="line">&#125;</span><br><span class="line">System.out.print(&quot;0.&quot;);</span><br><span class="line">    for(int i=0;i&lt;(-ex)-1;i++)//(-ex)-1是重点,因为例如：1.92E-2=0.0192，小数点后到一之间只有一个零</span><br><span class="line">    &#123;</span><br><span class="line">    System.out.print(0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">System.out.print(in);</span><br><span class="line">System.out.print(d[1]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>具体思路应该是对的，但是有一个测试点错误，两个超时。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;题目要求：&lt;/strong&gt;&lt;br&gt;科学计数法是科学家用来表示很大或很小的数字的一种方便的方法，其满足正则表  达式&lt;br&gt;&lt;code&gt;[+-][1-9].[0-9]+E[+-][0-9]+&lt;/code&gt;，&lt;br&gt;即数字的整数部分只有 1 位，小数部分至少有 1 位，该数字及其指数部分的正负号即使对正数也必定明确给出。&lt;br&gt;现以科学计数法的格式给出实数 A，请编写程序按普通数字表示法输出 A，并保证所有有效位都被保留。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="PTA" scheme="http://yoursite.com/categories/PTA/"/>
+    
+      <category term="科学计数法" scheme="http://yoursite.com/categories/PTA/%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
+    
+  </entry>
   
   <entry>
     <title>PTA--进制转换</title>
