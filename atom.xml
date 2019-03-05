@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-04T08:32:42.266Z</updated>
+  <updated>2019-03-05T12:15:24.292Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PTA-旧键盘</title>
+    <link href="http://yoursite.com/2019/03/05/PTA-%E6%97%A7%E9%94%AE%E7%9B%98/"/>
+    <id>http://yoursite.com/2019/03/05/PTA-旧键盘/</id>
+    <published>2019-03-05T11:44:31.000Z</published>
+    <updated>2019-03-05T12:15:24.292Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1029-旧键盘-（20-分）"><a href="#1029-旧键盘-（20-分）" class="headerlink" title="1029 旧键盘 （20 分）"></a>1029 旧键盘 （20 分）</h1><p>旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。<br><a id="more"></a><br>输入格式：  </p><blockquote><p>输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字是不超过 80 个字符的串，由字母 A-Z（包括大、小写）、数字 0-9、以及下划线 _（代表空格）组成。题目保证 2 个字符串均非空。  </p></blockquote><p>输出格式：  </p><blockquote><p>按照发现顺序，在一行中输出坏掉的键。其中英文字母只输出大写，每个坏键只输出一次。题目保证至少有 1 个坏键。  </p></blockquote><p>输入样例：  </p><blockquote><p>7_This_is_a_test  </p></blockquote><blockquote><p>_hs_s_a_es  </p></blockquote><p>输出样例：  </p><blockquote><p>7TI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">// 1029.cpp : 定义控制台应用程序的入口点。</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;cctype&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    string input, output;</span><br><span class="line">    vector&lt;char&gt; v;</span><br><span class="line"></span><br><span class="line">    getline(cin, input);</span><br><span class="line">    getline(cin, output);</span><br><span class="line"></span><br><span class="line">    for (int i = 0,j=0; i &lt; input.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (input[i] != output[j])//如果不同即为缺失的</span><br><span class="line">        &#123;</span><br><span class="line">            if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br><span class="line"></span><br><span class="line">            v.push_back(input[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">            ++j;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vector&lt;char&gt;::iterator i,begin = v.begin(), end = v.end();</span><br><span class="line"></span><br><span class="line">    for (i = begin; i != end; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (find(begin, i, *i) == i)//如果前面未出现则输出（即发现*i的位置在i上）</span><br><span class="line">            cout &lt;&lt; *i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><h2 id="知识点总结："><a href="#知识点总结：" class="headerlink" title="知识点总结："></a>知识点总结：</h2><ul><li><code>vector&lt;char&gt; v</code><br>创建一个char型的vector。<br>–&gt;<a href="https://www.cnblogs.com/zsq1993/p/5929806.html" target="_blank" rel="noopener">vector常用函数</a>   </li><li><code>v.push_back(input[i])</code><br>往容器里添加数据</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br></pre></td></tr></table></figure><p>大小写转换。  </p></li><li><code>vector&lt;char&gt;::iterator i</code><br>迭代器<br>–&gt;<a href="https://www.cnblogs.com/hdk1993/p/4419779.html" target="_blank" rel="noopener">c++迭代器（iterator）详解 </a>    </li><li><code>find(begin, i, *i) == i</code><br>–&gt;<a href="https://blog.csdn.net/sinat_34328764/article/details/79946650" target="_blank" rel="noopener">C++ find函数</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1029-旧键盘-（20-分）&quot;&gt;&lt;a href=&quot;#1029-旧键盘-（20-分）&quot; class=&quot;headerlink&quot; title=&quot;1029 旧键盘 （20 分）&quot;&gt;&lt;/a&gt;1029 旧键盘 （20 分）&lt;/h1&gt;&lt;p&gt;旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+      <category term="迭代器的使用" scheme="http://yoursite.com/categories/C/%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android-PressBarr重复出现</title>
+    <link href="http://yoursite.com/2019/03/04/Android-PressBarr%E9%87%8D%E5%A4%8D%E5%87%BA%E7%8E%B0/"/>
+    <id>http://yoursite.com/2019/03/04/Android-PressBarr重复出现/</id>
+    <published>2019-03-04T14:21:18.000Z</published>
+    <updated>2019-03-04T14:21:18.487Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>PTA-科学计数法</title>
