@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-05T12:15:24.292Z</updated>
+  <updated>2019-03-08T14:14:54.073Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开学一周回顾</title>
+    <link href="http://yoursite.com/2019/03/08/%E5%BC%80%E5%AD%A6%E4%B8%80%E5%91%A8%E5%9B%9E%E9%A1%BE/"/>
+    <id>http://yoursite.com/2019/03/08/开学一周回顾/</id>
+    <published>2019-03-08T13:30:32.000Z</published>
+    <updated>2019-03-08T14:14:54.073Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="开学一周回顾"><a href="#开学一周回顾" class="headerlink" title="开学一周回顾"></a>开学一周回顾</h1><p>第一周做的事情还挺多的，无论是班级事务还是学习，感觉还算充实。<br><a id="more"></a> </p><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><ul><li>安卓学习了ListView，并且给列表里的按钮配上了相应的活动，做成了一个水果小百科的形式，学会了在工程中新建类。<br><img src="/2019/03/08/开学一周回顾/1.jpg" alt><img src="/2019/03/08/开学一周回顾/2.jpg" alt></li><li>高数学到线性微分方程，前面还可以，但学到高阶线性的时候就蒙圈了  </li><li>用Java刷了一道PTA，用C++刷了一道题，学了容器、迭代器的一些用法。<br>–&gt;<a href="https://han1254.github.io/2019/03/05/PTA-旧键盘/" target="_blank" rel="noopener">PTA-旧键盘</a><br>–&gt;<a href="https://han1254.github.io/2019/03/04/PTA-科学计数法/" target="_blank" rel="noopener">PTA-科学计数法</a>    </li></ul><hr><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul><li>AS无法添加依赖库，书的版本跟现在的AS的版本不同，网上也没看到最新版本的教程，所以没法写，用不了RecyclerView.</li><li>Java学习的太慢，下周应该加速学习。要继续看网课。  </li><li>高数，离散，需要借助周末的时间赶紧复习。</li></ul><hr><h2 id="班级"><a href="#班级" class="headerlink" title="班级"></a>班级</h2><ul><li>发书  </li><li>班委会  </li><li>专业大会  </li><li>拍班级宣传视频  </li><li>重置快闪ppt  </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;开学一周回顾&quot;&gt;&lt;a href=&quot;#开学一周回顾&quot; class=&quot;headerlink&quot; title=&quot;开学一周回顾&quot;&gt;&lt;/a&gt;开学一周回顾&lt;/h1&gt;&lt;p&gt;第一周做的事情还挺多的，无论是班级事务还是学习，感觉还算充实。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="大一" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/"/>
+    
+      <category term="第二学期" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F/"/>
+    
+      <category term="第一周" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F/%E7%AC%AC%E4%B8%80%E5%91%A8/"/>
+    
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>PTA-旧键盘</title>
@@ -61,7 +91,7 @@
     <link href="http://yoursite.com/2019/03/04/PTA-%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
     <id>http://yoursite.com/2019/03/04/PTA-科学计数法/</id>
     <published>2019-03-04T05:05:15.000Z</published>
-    <updated>2019-03-04T08:32:42.266Z</updated>
+    <updated>2019-03-05T12:32:55.857Z</updated>
     
     <content type="html"><![CDATA[<p><strong>题目要求：</strong><br>科学计数法是科学家用来表示很大或很小的数字的一种方便的方法，其满足正则表  达式<br><code>[+-][1-9].[0-9]+E[+-][0-9]+</code>，<br>即数字的整数部分只有 1 位，小数部分至少有 1 位，该数字及其指数部分的正负号即使对正数也必定明确给出。<br>现以科学计数法的格式给出实数 A，请编写程序按普通数字表示法输出 A，并保证所有有效位都被保留。<br><a id="more"></a><br>输入格式：<br>每个输入包含 1 个测试用例，即一个以科学计数法表示的实数 A。该数字的存储长度不超过 9999 字节，且其指数的绝对值不超过 9999。<br>输出格式：<br>对每个测试用例，在一行中按普通数字表示法输出 A，并保证所有有效位都被保留，包括末尾的 0。<br>输入样例 1：<br><code>+1.23400E-03</code><br>输出样例 1：<br><code>0.00123400</code><br>输入样例 2：<br><code>-1.2E+10</code><br>输出样例 2：<br><code>-12000000000</code><br><strong>我的代码：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class Main &#123;</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">&#123;</span><br><span class="line">Scanner t=new Scanner(System.in);</span><br><span class="line">String s=t.next();</span><br><span class="line">String[] d = s.split(&quot;[.E]&quot;);</span><br><span class="line">t.close();</span><br><span class="line">int ex = Integer.parseInt(d[2]);//E后面的数（即整数），转化成整数</span><br><span class="line">int in = Integer.parseInt(d[0]);//小数点前的数，转化成整数</span><br><span class="line">if(ex&gt;=0)//指数大于零</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(in);</span><br><span class="line">boolean h=false;//判断新数是不是有小数点</span><br><span class="line">if(ex&lt;d[1].length())//指数小于小数位数的时候</span><br><span class="line">&#123;</span><br><span class="line">h=true;</span><br><span class="line">&#125;</span><br><span class="line">int i;</span><br><span class="line">for(i=0;i&lt;d[1].length()&amp;&amp;ex&gt;0;i++,ex--)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(d[1].charAt(i));</span><br><span class="line">&#125;</span><br><span class="line">if(h)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(&quot;.&quot;);</span><br><span class="line">for(;i&lt;d[i].length();i++)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(d[i].charAt(i));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">while(ex!=0)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(0);</span><br><span class="line">ex--;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">else//指数小于零</span><br><span class="line">&#123;</span><br><span class="line">if(in&lt;0)</span><br><span class="line">&#123;</span><br><span class="line">System.out.print(&quot;-&quot;);</span><br><span class="line">in=-in;</span><br><span class="line">&#125;</span><br><span class="line">System.out.print(&quot;0.&quot;);</span><br><span class="line">    for(int i=0;i&lt;(-ex)-1;i++)//(-ex)-1是重点,因为例如：1.92E-2=0.0192，小数点后到一之间只有一个零</span><br><span class="line">    &#123;</span><br><span class="line">    System.out.print(0);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">System.out.print(in);</span><br><span class="line">System.out.print(d[1]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>具体思路应该是对的，但是有一个测试点错误，两个超时。</p>]]></content>
     
@@ -76,9 +106,9 @@
       <category term="科学计数法" scheme="http://yoursite.com/categories/PTA/%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -107,9 +137,9 @@
       <category term="进制转换" scheme="http://yoursite.com/categories/PTA/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
