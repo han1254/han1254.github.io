@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T14:12:04.974Z</updated>
+  <updated>2019-03-18T17:49:37.416Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python安装</title>
+    <link href="http://yoursite.com/2019/03/19/Python%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2019/03/19/Python安装/</id>
+    <published>2019-03-18T16:05:36.000Z</published>
+    <updated>2019-03-18T17:49:37.416Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PyCharm的安装"><a href="#PyCharm的安装" class="headerlink" title="PyCharm的安装"></a>PyCharm的安装</h1><p>这个文章算是一个帮助文档吧。︿(￣︶￣)︿<br><a id="more"></a><br>废话不多说  </p><ul><li>第一步，安装Python（注意，这个不是编译器）</li></ul><p><img src="/2019/03/19/Python安装/1.PNG" alt><br>–&gt;<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">￥￥￥python官方下载网址￥￥￥</a><br>–&gt;<em>一定要记住自己的安装路径，要不然找起来很麻烦的,别问我怎么知道的</em><br><img src="/2019/03/19/Python安装/3.jpg" alt> </p><p>这个过程是为了让你的电脑有一个能编译Python的环境，装上它，配置好环境，你就能在电脑上写python。<br>但是——下载完成后，还不不能直接编写python。 </p><hr><p><strong>现在有两种方法供你选择（如果你想简单一点的话，可以直接看方法2）</strong>：</p><h2 id="一-配置环境变量法"><a href="#一-配置环境变量法" class="headerlink" title="一.配置环境变量法"></a>一.配置环境变量法</h2><p>正如之前所说，你需要给电脑配置一个环境，那么现在就涉及到环境变量的配置上了。  </p><ul><li>第一步，右击我的电脑，找到属性，点击。<br>然后点击高级系统设置。<br><img src="/2019/03/19/Python安装/4.PNG" alt>   </li><li>点击环境变量<br><img src="/2019/03/19/Python安装/5.PNG" alt>    </li><li>然后就在系统变量里面找，找一个叫Path或者PATH的东西，别管它是干嘛的，找就行了。<br><img src="/2019/03/19/Python安装/6.PNG" alt>   </li><li>哇，找到了！╰(￣▽￣)╭<br><img src="/2019/03/19/Python安装/7.PNG" alt>   </li><li>双击它，然后就会弹出一个好奇妙的东西<br><img src="/2019/03/19/Python安装/8.PNG" alt>   </li><li>我早就提醒过你去记住安装路径的。比如我的就被默认安装到了C盘<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\han1254\AppData\Local\Programs\Python\Python37-32</span><br></pre></td></tr></table></figure></li></ul><p>把你的路径复制下来，然后找一个空白的格子，双击，然后粘贴进去<br><img src="/2019/03/19/Python安装/9.PNG" alt>   </p><ul><li>接下来就是要见证奇迹了<br>按住电脑的win键（就是那个画着Windows图标的键）和字母R键，<br>会出现这么个鬼东西<br><img src="/2019/03/19/Python安装/10.PNG" alt>   </li><li>像我一样，在里面输入cmd,回车<br><img src="/2019/03/19/Python安装/11.PNG" alt><br>哇，黑框框 </li><li>输入<code>python</code> ，出现下图情况，估计就可以了<br><img src="/2019/03/19/Python安装/13.PNG" alt> </li><li>接下来你就可以写程序了<br><img src="/2019/03/19/Python安装/14.PNG" alt> </li><li><h2 id="然而你是不会甘愿就对着个黑框框写程序的"><a href="#然而你是不会甘愿就对着个黑框框写程序的" class="headerlink" title="然而你是不会甘愿就对着个黑框框写程序的"></a>然而你是不会甘愿就对着个黑框框写程序的</h2>所以，要用一个颜值高一点的编译器<br>当~当~当~当，PyCharm<br><img src="/2019/03/19/Python安装/15.PNG" alt><br>–&gt;<a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">PyCharm下载链接</a><br>记住，下载community版本的，professional的太大了。<br><img src="/2019/03/19/Python安装/16.PNG" alt><br>然后下载安装就行了。<br>在开始页面新建project，会出现如下界面<br><img src="/2019/03/19/Python安装/17.PNG" alt><br>untitle说明没有名字，改个名字，不改也行，我改成hello,示范一下。<br><img src="/2019/03/19/Python安装/18.PNG" alt><br>然后在我标的地方，右键-&gt;new-&gt;PythonFile,写代码，运行<br><img src="/2019/03/19/Python安装/21.PNG" alt></li></ul><h2 id="二-直接法"><a href="#二-直接法" class="headerlink" title="二.直接法"></a>二.直接法</h2><ul><li>第一步，下载python</li><li>第二步，下载PyCharm</li><li>第三步，如果你没有配置环境的话，那么下图里，我画红圈的地方是啥都没有的。</li></ul><p><img src="/2019/03/19/Python安装/22.PNG" alt><br>点击省略号<br><img src="/2019/03/19/Python安装/24.PNG" alt><br>再点击，他会出现一个树状图让你选文件夹，也就是你下载python的文件夹。<br><img src="/2019/03/19/Python安装/25.PNG" alt><br>大概就像这个图里显示的路径一样，一定要选到python.exe<br><img src="/2019/03/19/Python安装/26.PNG" alt><br>不要忘了勾选这个，要不你每次创建项目都要设置<br><img src="/2019/03/19/Python安装/27.PNG" alt></p><h2 id="电脑快没电了，如果我的教程不清楚，下面还有一个"><a href="#电脑快没电了，如果我的教程不清楚，下面还有一个" class="headerlink" title="电脑快没电了，如果我的教程不清楚，下面还有一个"></a>电脑快没电了，如果我的教程不清楚，下面还有一个</h2><p><a href="http://www.runoob.com/w3cnote/pycharm-windows-install.html" target="_blank" rel="noopener">PyCharm 安装教程（Windows）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;PyCharm的安装&quot;&gt;&lt;a href=&quot;#PyCharm的安装&quot; class=&quot;headerlink&quot; title=&quot;PyCharm的安装&quot;&gt;&lt;/a&gt;PyCharm的安装&lt;/h1&gt;&lt;p&gt;这个文章算是一个帮助文档吧。︿(￣︶￣)︿&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+      <category term="pycharm的安装" scheme="http://yoursite.com/categories/Python/pycharm%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="install" scheme="http://yoursite.com/tags/install/"/>
+    
+  </entry>
   
   <entry>
     <title>Adapter</title>
@@ -60,9 +86,9 @@
     
       <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
     
   </entry>
   
@@ -126,9 +152,9 @@
       <category term="科学计数法" scheme="http://yoursite.com/categories/PTA/%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
     
     
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
     
   </entry>
   
@@ -157,9 +183,9 @@
       <category term="进制转换" scheme="http://yoursite.com/categories/PTA/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
     
     
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
     
   </entry>
   
