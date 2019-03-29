@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-29T15:35:52.937Z</updated>
+  <updated>2019-03-29T15:41:38.749Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代码规范</title>
+    <link href="http://yoursite.com/2019/03/29/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://yoursite.com/2019/03/29/代码规范/</id>
+    <published>2019-03-29T15:39:09.000Z</published>
+    <updated>2019-03-29T15:41:38.749Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="没有规矩不成方圆"><a href="#没有规矩不成方圆" class="headerlink" title="没有规矩不成方圆"></a>没有规矩不成方圆</h1><a id="more"></a><h1 id="JAVA代码规范"><a href="#JAVA代码规范" class="headerlink" title="JAVA代码规范"></a>JAVA代码规范</h1><h2 id="强制性规范"><a href="#强制性规范" class="headerlink" title="强制性规范:"></a>强制性规范:</h2><ul><li>代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束。  </li><li>代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。   </li><li>类名使用UpperCamelCase 风格，必须遵从驼峰形式。  </li><li>方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase 风格，必须遵从驼峰形式。  </li><li>常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长例如：MAX_STOCK_COUNT。  </li><li>抽象类命名使用 Abstract 或 Base 开头;异常类命名使用 Exception 结尾;测试类 命名以它要测试的类的名称开始。  </li><li>杜绝不规范的英文缩写：AbstractClass 缩写成AbsClass；condition缩写成condi;此类随意缩写严重降低了代码的可阅读性。  </li><li>如果使用到了设计模式，建议在类名中体现出具体的模式。</li></ul><hr><h1 id="Android代码规范"><a href="#Android代码规范" class="headerlink" title="Android代码规范"></a>Android代码规范</h1><ul><li><p>Activity 命名一律使用 模块名+Activity 的方式。例如，LoginActivity、SignupActivity；</p></li><li><p>Fragment 命名一律使用 模块名+Fragment 的方式；<br>自定义View：Custom(建议)+功能名+View/ViewGroup(具体的组件名称)。例如：CustomImageScroller、CustomRatingBar。</p></li><li><p>Widget 小组件：ScanWidget、WeatherWidget。</p></li><li><p>Dialog对话框：功能名+Dialog。例如：LoginDialog、ProgressDialog</p></li><li><p>尽量在每一个Activity或类中加入TAG,方便我们查看Activity的信息。(Tip : 使用Android Studio提供的快捷键logt可快速生成当前 类的常量)  </p></li><li>对于使用Intent传递数据，声明一些Key的时候，EXTRA_KEY_+具体Key名称。</li><li>所有的常量加上注释，且功能相同的排放在一起，不同的进行换行；<br>Activity中变量采用m开头+类名。例如，mTable、mPerson；  </li><li>Activity中的控件：m+模块名+控件类型名称。例如，mLoginEditText,mLoginTextView;</li></ul><hr><h1 id="资源Res"><a href="#资源Res" class="headerlink" title="资源Res"></a>资源Res</h1><p>1.按照资源的类型，分为以下几种</p><blockquote><p>控件Id命名：控件缩写 _模块（module) _功能名(function)   </p></blockquote><p>控件类型|ID命名规则<br>|—|—|<br>TextView | tv_module_function<br>EditText | et_module_function<br>ImageView | iv_module_function<br>Button | btn_module_function<br>ListView | lv_module_function<br>GridView | gv_module_function<br>CheckBox | check_module_function<br>RadioButton | radio_module_function<br>LinearLayout| ll_module_function<br>RelativeLayout | rl_module_function<br>FrameLayout | fl_module_function<br>GridLayout | gl_module_function</p><hr><blockquote><p>Drawable资源命名  </p></blockquote><table><thead><tr><th>Resources Type</th><th>命名规则</th></tr></thead><tbody><tr><td></td></tr></tbody></table><p>launcher icon | ic_launcher。例R.drawable.ic_launcher<br>normal icon | ic_具体模块_功能。例R.drawable.ic_audio_pause<br>Toolbar icon | ic_ab_功能名。例如ic_ab_search<br>selector | selector_模块_功能名。例如 selector_login_button<br>shape | shape_模块功能名状态。例如 R.drawable.shape_login_button_normal</p><blockquote><p>Layout命名   </p></blockquote><table><thead><tr><th>类型</th><th>命名规则</th></tr></thead><tbody><tr><td></td></tr></tbody></table><p>activity | activity_模块名。例如 R.layout.activity_login<br>fragment | fragment_模块名。例如 R.layout.fragment_login_layout_header<br>include | layout_模块名_功能名。例如 @layout/layout_login_bottom<br>adapter | adapter_item_模块名_功能名。例如 R.layout.adapter_item_simple_text<br>dialog | dialog_模块_功能名。例如 R.layout.dialog_time_picker<br>list header | header_模块_功能。例如 R.layout.header_main_top_ad<br>list footer | footer_模块_功能。例如 R.layout.footer_main_bottom_action<br>widget | widget_模块_功能。例如 R.layout.widget_app_clock</p><blockquote><p>Menu资源命名  </p></blockquote><p>Resources Type | 命名规则<br>|–|–|<br>menu | menu_模块名。例如 menu_login</p><blockquote><p>Value资源命名 </p></blockquote><p>Resources Type | 命名规则<br>|–|–|<br>color | 模块名_color。例如 material_design_color<br>dimens | 模块名_dimens。例如 material_design_dimens<br>style | 模块名_style。例如 material_design_style<br>themes | 模块名_themes。例如 material_design_themes</p><hr><h1 id="当然这只是一部分，更多的请移步"><a href="#当然这只是一部分，更多的请移步" class="headerlink" title="当然这只是一部分，更多的请移步"></a>当然这只是一部分，更多的请移步</h1><p><a href="https://www.jianshu.com/p/f5a55dff62f0" target="_blank" rel="noopener">这可能是史上最全的Android代码规范</a><br><a href="https://github.com/liuzhanta/Android-Developer-Books/blob/master/Books_Java/阿里巴巴Java开发手册.pdf" target="_blank" rel="noopener">阿里Java开发手册</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;没有规矩不成方圆&quot;&gt;&lt;a href=&quot;#没有规矩不成方圆&quot; class=&quot;headerlink&quot; title=&quot;没有规矩不成方圆&quot;&gt;&lt;/a&gt;没有规矩不成方圆&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="规范" scheme="http://yoursite.com/tags/%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Retrofit</title>
@@ -455,28 +479,6 @@
       <category term="study" scheme="http://yoursite.com/tags/study/"/>
     
       <category term="Web" scheme="http://yoursite.com/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog</title>
-    <link href="http://yoursite.com/2019/02/24/blog/"/>
-    <id>http://yoursite.com/2019/02/24/blog/</id>
-    <published>2019-02-24T14:52:47.000Z</published>
-    <updated>2019-02-28T04:43:16.142Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Blog的搭建"><a href="#Blog的搭建" class="headerlink" title="Blog的搭建"></a>Blog的搭建</h1><h4 id="2019-2-24"><a href="#2019-2-24" class="headerlink" title="2019.2.24"></a>2019.2.24</h4><a id="more"></a>  <p><em>本文参考:</em><br><a href="https://blog.csdn.net/weixin_39879178/article/details/80319392" target="_blank" rel="noopener">2018.5月使用Github+Hexo搭建自己的博客</a> 　　</p><hr><p>&#160; &#160; &#160; &#160;今天下午，我突发奇想，想要自己搭建一个blog，自娱自乐一下。然鹅，能力不够啊，不知道该如何下手。于是百度又有了用武之地。<br>&#160; &#160; &#160; &#160;刚一开始我是茫然的，但在浏览了一会之后，我有点明白自己要干啥了。<br>&#160; &#160; &#160; &#160;具体过程我不叙述了，才刚开始学，还不太通。   </p><hr><h2 id="gt-gt-需要安装的东西"><a href="#gt-gt-需要安装的东西" class="headerlink" title="&gt;&gt;需要安装的东西"></a>&gt;&gt;需要安装的东西</h2><ol><li><strong>Hexo</strong> <blockquote><p>Hexo官网中说是这么描述的：A fast, simple &amp; powerful blog framework,即:一个快速、简单且强大的博客快速生产工具。它的简单体现在你完全有可能在30分钟内就生成属于你的个人博客。而它的强大体现在你对细节的调整上完全有可能花上一天的时间。  </p></blockquote></li></ol><ol start="2"><li><strong>环境配置</strong></li></ol><ul><li>node.js  <blockquote><p>Node.js 的实质是一个JavaScript运行环境,这里我们主要使用它来生成我们博客的静态页面。从官网下载最新的安装包进行默认安装就好。  </p></blockquote></li><li><p>git  </p><blockquote><p>git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可<br><a href="git是最流行的分布式版本控制系统，我们使用它主要是与github进行交互。安装git使用默认选项安装即可">git教程</a>&lt;|click here|</p></blockquote></li><li><p>注册github<br>略  </p><h2 id="gt-gt-实战中的问题"><a href="#gt-gt-实战中的问题" class="headerlink" title="&gt;&gt;实战中的问题"></a>&gt;&gt;实战中的问题</h2></li></ul><ol><li><strong>生成SSH密钥设置到Github</strong><br><img src="/2019/02/24/blog/1.png" alt><br><em>解决方法：我就按照他的做了两遍就成了</em>       </li></ol><ol start="2"><li><strong>预览博客</strong><br>不能让语句停止运行<br><img src="/2019/02/24/blog/2.png" alt><br><em>如上图，不能让它stop</em>  </li></ol><ol start="3"><li><strong>大于hexo 3.0的上传到github的方法</strong><br>他这里用的是.deploy_git文件，我的电脑上没有，所以我更改的是.config.yml文件<br><img src="/2019/02/24/blog/3.png" alt> </li><li><strong>将gitbash部署hexo到github</strong><br><code>hexo deploy</code>  </li></ol><ul><li>遇到的第一个问题就是：<code>hexo s</code>后报错：<br><img src="http://note.youdao.com/noteshare?id=27c7a67a6d850c44713ac589704f1865" alt><br><em>原来是我之前把.config.yml文件里的repo按照他的也改了，其实不用改</em> </li><li>第二个就是：<code>fatal: unable to auto-detect email address (got &#39;Yang@yyw.(none)&#39;)</code>;<br>然后百度之后，解决 ：<br><code>$ git config --global user.email &quot;you@example.com&quot;</code><br><code>$ git config --local -l 查看本地配置</code><br><a href="http://www.voidcn.com/article/p-twicxjaq-ro.html" target="_blank" rel="noopener">原文链接</a><br>最后附上我的博客链接   <a href="https://han1254.github.io/" target="_blank" rel="noopener">Han1254</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Blog的搭建&quot;&gt;&lt;a href=&quot;#Blog的搭建&quot; class=&quot;headerlink&quot; title=&quot;Blog的搭建&quot;&gt;&lt;/a&gt;Blog的搭建&lt;/h1&gt;&lt;h4 id=&quot;2019-2-24&quot;&gt;&lt;a href=&quot;#2019-2-24&quot; class=&quot;headerlink&quot; title=&quot;2019.2.24&quot;&gt;&lt;/a&gt;2019.2.24&lt;/h4&gt;
-    
-    </summary>
-    
-      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
     
   </entry>
   
