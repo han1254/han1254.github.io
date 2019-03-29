@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-23T05:31:22.647Z</updated>
+  <updated>2019-03-29T15:11:24.060Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,26 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>image</title>
-    <link href="http://yoursite.com/2019/03/23/image/"/>
-    <id>http://yoursite.com/2019/03/23/image/</id>
-    <published>2019-03-23T05:27:28.000Z</published>
-    <updated>2019-03-23T05:31:22.647Z</updated>
+    <title>android跳转-addFlags.md</title>
+    <link href="http://yoursite.com/2019/03/29/android%E8%B7%B3%E8%BD%AC-addFlags-md/"/>
+    <id>http://yoursite.com/2019/03/29/android跳转-addFlags-md/</id>
+    <published>2019-03-29T06:57:00.000Z</published>
+    <updated>2019-03-29T15:11:24.060Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2019/03/23/image/0_1.jpg" alt="安卓学习路径"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="android跳转-addFlags"><a href="#android跳转-addFlags" class="headerlink" title="android跳转-addFlags"></a>android跳转-addFlags</h1><a id="more"></a><p>Activity的两种启动模式：FLAG_ACTIVITY_CLEAR_TOP和FLAG_ACTIVITY_REORDER_TO_FRONT</p><ol><li>如果已经启动了四个Activity：A，B，C和D。在D Activity里，我们要跳到B Activity，同时希望C finish掉，可以在startActivity(intent)里的intent里添加flags标记，如下所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent(this, B.class);   </span><br><span class="line">intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  </span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure></li></ol><p>这样启动B Activity，就会把D，C都finished掉，如果你的B Activity的启动模式是默认的（multiple） ，则B Activity会finished掉，再启动一个新的Activity B。<br>  如果不想重新再创建一个新的B Activity，则在上面的代码里再加上：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);</span><br></pre></td></tr></table></figure></p><p>  这样B Activity就不会再创建一个新的了，而是会重用之前的B Activity，同时调用B Activity的onNewIntent()方法。  </p><hr><ol start="2"><li>如果已经启动了四个Activity：A，B，C和D，在D Activity里，想再启动一个Actvity B，但不变成A,B,C,D,B，而是希望是A,C,D,B，则可以像下面写代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  Intent intent = new Intent(this, MainActivity.class);  </span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);   </span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/2019/03/23/image/0_1.jpg&quot; alt=&quot;安卓学习路径&quot;&gt;&lt;/p&gt;
-
-      
+      &lt;h1 id=&quot;android跳转-addFlags&quot;&gt;&lt;a href=&quot;#android跳转-addFlags&quot; class=&quot;headerlink&quot; title=&quot;android跳转-addFlags&quot;&gt;&lt;/a&gt;android跳转-addFlags&lt;/h1&gt;
     
     </summary>
     
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
   </entry>
   
