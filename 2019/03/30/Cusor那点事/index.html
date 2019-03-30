@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="Cusor那点事">
+<meta name="description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
 <meta name="keywords" content="Android,cusor,SQLite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cusor那点事">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/Cusor那点事/index.html">
 <meta property="og:site_name" content="Han1254">
-<meta property="og:description" content="Cusor那点事">
+<meta property="og:description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20161201161718716">
-<meta property="og:updated_time" content="2019-03-29T23:22:31.307Z">
+<meta property="og:updated_time" content="2019-03-29T23:30:28.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cusor那点事">
-<meta name="twitter:description" content="Cusor那点事">
+<meta name="twitter:description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 
 
@@ -368,8 +368,7 @@
       
 
       
-        <h1 id="Cusor那点事"><a href="#Cusor那点事" class="headerlink" title="Cusor那点事"></a>Cusor那点事</h1><a id="more"></a>
-<p>今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isRight(String edit_account, String edit_password)&#123;</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br><span class="line">        String sql = &quot;Select * from usertable where username = ? and password = ?&quot;;</span><br><span class="line">        Cursor cursor = db.rawQuery(sql, new String[]&#123;edit_account, edit_password&#125;);</span><br><span class="line">        if(cursor.moveToFirst())&#123;</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Cusor那点事"><a href="#Cusor那点事" class="headerlink" title="Cusor那点事"></a>Cusor那点事</h1><p>今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isRight(String edit_account, String edit_password)&#123;</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br><span class="line">        String sql = &quot;Select * from usertable where username = ? and password = ?&quot;;</span><br><span class="line">        Cursor cursor = db.rawQuery(sql, new String[]&#123;edit_account, edit_password&#125;);</span><br><span class="line">        if(cursor.moveToFirst())&#123;</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p><em>emmm~ Cusor 王德发！！！！！这是啥 ?</em><br>上网搜索了一下，cusor是英语‘光标’的意思  </p>
 <hr>
 <h2 id="关于-Cursor"><a href="#关于-Cursor" class="headerlink" title="关于 Cursor"></a>关于 Cursor</h2><p>在你理解和使用 Android Cursor 的时候你必须先知道关于 Cursor 的几件事情：<br>Cursor 是每行的集合。使用 moveToFirst() 定位第一行。你必须知道每一列的名称。你必须知道每一列的数据类型。Cursor 是一个随机的数据源。所有的数据都是通过下标取得。   </p>
@@ -392,9 +391,11 @@
 <p>·isBeforeFirst()——返回游标是否指向之前第一行的位置<br>·isAfterLast()——返回游标是否指向第最后一行的位置<br>·isClosed()——如果返回 true 即表示该游戏标己关闭<br>有了以上的方法，可以如此取出数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(cur.moveToFirst();!cur.isAfterLast();cur.moveToNext())</span><br><span class="line">&#123;</span><br><span class="line">    int nameColumn = cur.getColumnIndex(People.NAME);</span><br><span class="line">    int phoneColumn = cur.getColumnIndex(People.NUMBER);</span><br><span class="line">    String name = cur.getString(nameColumn);</span><br><span class="line">    String phoneNumber = cur.getString(phoneColumn);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h2 id="Cusor解析"><a href="#Cusor解析" class="headerlink" title="Cusor解析"></a>Cusor解析</h2><p>一般情况下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQLiteDataBase  </span><br><span class="line"> db;   </span><br><span class="line">Cursor  </span><br><span class="line"> cursor = db.query(各种参数);</span><br></pre></td></tr></table></figure></p>
-<p>这时，就出现了网上的解释了，说cursor是每行的集合。<br>现在先解释一下SQLite数据库中是怎么存放数据的，是以表的形式存放的，看这个表Student<br>position | id | name | gender | age | city<br>|–|–|—|–|–|–|<br>0 |1 |张三| 男|19|山东<br>1|2|李四|男|20|上海<br>3|4|王五|男|34|广西<br>4|5|牛大花|女|17|天津<br>5|6|光绪|男|24|北京<br>所以这个每行的集合的意思，是获得的满足条件（就是我们query方法中传入的条件参数）的所有行。<br>比如我要在这个表中找gender为男的，那么获得到的cursor就包含了张三行，李四行，王五行，光绪行。   </p>
+<p>这时，就出现了网上的解释了，说cursor是每行的集合。<br>现在先解释一下SQLite数据库中是怎么存放数据的，是以表的形式存放的，看这个表Student  </p>
+<p>position | id | name | gender | age | city<br>|–|–|—|–|–|–|<br>0 |1 |张三| 男|19|山东<br>1|2|李四|男|20|上海<br>3|4|王五|男|34|广西<br>4|5|牛大花|女|17|天津<br>5|6|光绪|男|24|北京<br>所以这个每行的集合的意思，是获得的满足条件（就是我们query方法中传入的条件参数）的所有行。<br>比如我要在这个表中找gender为男的，那么获得到的cursor就包含了张三行，李四行，王五行，光绪行。   </p>
 <hr>
-<h3 id="遍历cursor内容的时候，为什么要先moveToFirst-？"><a href="#遍历cursor内容的时候，为什么要先moveToFirst-？" class="headerlink" title="遍历cursor内容的时候，为什么要先moveToFirst()？"></a>遍历cursor内容的时候，为什么要先moveToFirst()？</h3><p>我们不进行moveToFirst()操作，我们获取游标对象后，直接输出它当前的position值<br><img src="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>可以看到，输出的值是-1。<br>position | id | name | gender | age | city<br>|–|–|—|–|–|–|<br>-1 |null|null|null|null|null<br>0 |1 |张三| 男|19|山东<br>1|2|李四|男|20|上海<br>3|4|王五|男|34|广西<br>4|5|牛大花|女|17|天津<br>5|6|光绪|男|24|北京<br>也就是说，现在光标在第零行之前。<br>所以我们使用moveToFirst后在输出position就会发现position=0了，使用moveToNext也可以。   </p>
+<h3 id="遍历cursor内容的时候，为什么要先moveToFirst-？"><a href="#遍历cursor内容的时候，为什么要先moveToFirst-？" class="headerlink" title="遍历cursor内容的时候，为什么要先moveToFirst()？"></a>遍历cursor内容的时候，为什么要先moveToFirst()？</h3><p>我们不进行moveToFirst()操作，我们获取游标对象后，直接输出它当前的position值<br><img src="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>可以看到，输出的值是-1。  </p>
+<p>position | id | name | gender | age | city<br>|–|–|—|–|–|–|<br>-1 |null|null|null|null|null<br>0 |1 |张三| 男|19|山东<br>1|2|李四|男|20|上海<br>3|4|王五|男|34|广西<br>4|5|牛大花|女|17|天津<br>5|6|光绪|男|24|北京<br>也就是说，现在光标在第零行之前。<br>所以我们使用moveToFirst后在输出position就会发现position=0了，使用moveToNext也可以。   </p>
 <hr>
 <h3 id="moveToNext如何得知是否已经遍历完毕呢？"><a href="#moveToNext如何得知是否已经遍历完毕呢？" class="headerlink" title="moveToNext如何得知是否已经遍历完毕呢？"></a>moveToNext如何得知是否已经遍历完毕呢？</h3><p>我们翻看源码，会发现moveToFirst，moveToNext，moveToLast，moveToPrevious等最后都会执行到这个方法<br><img src="https://img-blog.csdn.net/20161201161718716" alt><br>图中说的：这个对象在初始化的时候，指的就是当前页面的那个对象。mPos=-1被写在一个空参构造方法里了。<br>看源码的时候也能发现：<br>moveToFirst调用的是moveToPosition（0）<br>moveToNext调用的是moveToPosition（mPos+1)<br>所以如果是第一次调用的话，这两句话的意思是一样的（开始mPos=-1）。   </p>
 <h3 id="那么现在来看之前的代码"><a href="#那么现在来看之前的代码" class="headerlink" title="那么现在来看之前的代码"></a>那么现在来看之前的代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(cursor.moveToFirst())&#123;//用来判断是否遍历并且是否存在这样一组account&amp;password</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br></pre></td></tr></table></figure>
@@ -454,6 +455,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/30/Debug日志-Android-SQLite/" rel="prev" title="Debug日志-Android-SQLite">
+                Debug日志-Android-SQLite <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -532,7 +537,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -543,7 +548,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -554,7 +559,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

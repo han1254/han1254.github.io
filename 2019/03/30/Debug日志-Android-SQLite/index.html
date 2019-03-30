@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="PTA,C++,">
+  <meta name="keywords" content="Android,Debug,">
 
 
 
@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="1029 旧键盘 （20 分）旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。">
-<meta name="keywords" content="PTA,C++">
+<meta name="description" content="三月二十九日，遇到了一个关于SQLite的Bug。">
+<meta name="keywords" content="Android,Debug">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA-旧键盘">
-<meta property="og:url" content="http://yoursite.com/2019/03/05/PTA-旧键盘/index.html">
+<meta property="og:title" content="Debug日志-Android-SQLite">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/Debug日志-Android-SQLite/index.html">
 <meta property="og:site_name" content="Han1254">
-<meta property="og:description" content="1029 旧键盘 （20 分）旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。">
+<meta property="og:description" content="三月二十九日，遇到了一个关于SQLite的Bug。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T12:15:24.292Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/30/Debug日志-Android-SQLite/bug2.PNG">
+<meta property="og:updated_time" content="2019-03-30T11:06:58.567Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PTA-旧键盘">
-<meta name="twitter:description" content="1029 旧键盘 （20 分）旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。">
+<meta name="twitter:title" content="Debug日志-Android-SQLite">
+<meta name="twitter:description" content="三月二十九日，遇到了一个关于SQLite的Bug。">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/30/Debug日志-Android-SQLite/bug2.PNG">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/05/PTA-旧键盘/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/30/Debug日志-Android-SQLite/">
 
 
 
 
 
-  <title>PTA-旧键盘 | Han1254</title>
+  <title>Debug日志-Android-SQLite | Han1254</title>
   
 
 
@@ -276,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/PTA-旧键盘/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/Debug日志-Android-SQLite/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Han1254">
@@ -293,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PTA-旧键盘</h1>
+          <h1 class="post-title" itemprop="name headline">Debug日志-Android-SQLite</h1>
         
 
         <div class="post-meta">
@@ -305,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T19:44:31+08:00">
-                2019-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T18:54:04+08:00">
+                2019-03-30
               </time>
             
 
@@ -328,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/Debug/" itemprop="url" rel="index">
+                    <span itemprop="name">Debug</span>
                   </a>
                 </span>
 
@@ -339,8 +341,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/迭代器的使用/" itemprop="url" rel="index">
-                    <span itemprop="name">迭代器的使用</span>
+                  <a href="/categories/Debug/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -376,34 +378,10 @@
       
 
       
-        <h1 id="1029-旧键盘-（20-分）"><a href="#1029-旧键盘-（20-分）" class="headerlink" title="1029 旧键盘 （20 分）"></a>1029 旧键盘 （20 分）</h1><p>旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。<br><a id="more"></a><br>输入格式：  </p>
-<blockquote>
-<p>输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字是不超过 80 个字符的串，由字母 A-Z（包括大、小写）、数字 0-9、以及下划线 _（代表空格）组成。题目保证 2 个字符串均非空。  </p>
-</blockquote>
-<p>输出格式：  </p>
-<blockquote>
-<p>按照发现顺序，在一行中输出坏掉的键。其中英文字母只输出大写，每个坏键只输出一次。题目保证至少有 1 个坏键。  </p>
-</blockquote>
-<p>输入样例：  </p>
-<blockquote>
-<p>7_This_is_a_test  </p>
-</blockquote>
-<blockquote>
-<p>_hs_s_a_es  </p>
-</blockquote>
-<p>输出样例：  </p>
-<blockquote>
-<p>7TI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">// 1029.cpp : 定义控制台应用程序的入口点。</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;cctype&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    string input, output;</span><br><span class="line">    vector&lt;char&gt; v;</span><br><span class="line"></span><br><span class="line">    getline(cin, input);</span><br><span class="line">    getline(cin, output);</span><br><span class="line"></span><br><span class="line">    for (int i = 0,j=0; i &lt; input.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (input[i] != output[j])//如果不同即为缺失的</span><br><span class="line">        &#123;</span><br><span class="line">            if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br><span class="line"></span><br><span class="line">            v.push_back(input[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">            ++j;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vector&lt;char&gt;::iterator i,begin = v.begin(), end = v.end();</span><br><span class="line"></span><br><span class="line">    for (i = begin; i != end; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (find(begin, i, *i) == i)//如果前面未出现则输出（即发现*i的位置在i上）</span><br><span class="line">            cout &lt;&lt; *i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="知识点总结："><a href="#知识点总结：" class="headerlink" title="知识点总结："></a>知识点总结：</h2><ul>
-<li><code>vector&lt;char&gt; v</code><br>创建一个char型的vector。<br>–&gt;<a href="https://www.cnblogs.com/zsq1993/p/5929806.html" target="_blank" rel="noopener">vector常用函数</a>   </li>
-<li><code>v.push_back(input[i])</code><br>往容器里添加数据</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br></pre></td></tr></table></figure>
-<p>大小写转换。  </p>
-</li>
-<li><code>vector&lt;char&gt;::iterator i</code><br>迭代器<br>–&gt;<a href="https://www.cnblogs.com/hdk1993/p/4419779.html" target="_blank" rel="noopener">c++迭代器（iterator）详解 </a>    </li>
-<li><code>find(begin, i, *i) == i</code><br>–&gt;<a href="https://blog.csdn.net/sinat_34328764/article/details/79946650" target="_blank" rel="noopener">C++ find函数</a></li>
-</ul>
+        <p>三月二十九日，遇到了一个关于SQLite的Bug。<br><a id="more"></a><br><img src="/2019/03/30/Debug日志-Android-SQLite/bug2.PNG" alt><br>其结果就是，每次我在登陆界面只要一填完账号密码，再点击登陆，就会闪退。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">package com.example.reby;</span><br><span class="line"></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line">public class LoginActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line">    private EditText edit_account, edit_password;</span><br><span class="line">    private Button btn_login,btn_register;</span><br><span class="line">    private DBHelper dbHelper;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        //设置状态栏的全透明</span><br><span class="line">       /* if (Build.VERSION.SDK_INT &gt;= 21) &#123;</span><br><span class="line">           View decorView = getWindow().getDecorView();</span><br><span class="line">           decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);</span><br><span class="line">           getWindow().setStatusBarColor(Color.TRANSPARENT);</span><br><span class="line">        &#125;*/</span><br><span class="line">       //设置状态栏的半透明</span><br><span class="line">        if(Build.VERSION.SDK_INT &gt;= 21) &#123;</span><br><span class="line">            getWindow().setFlags(</span><br><span class="line">                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,</span><br><span class="line">                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);</span><br><span class="line">        &#125;</span><br><span class="line">        setContentView(R.layout.activity_login);</span><br><span class="line">        ActionBar actionBar = getSupportActionBar();</span><br><span class="line">        if(actionBar != null)&#123;</span><br><span class="line">            actionBar.hide();</span><br><span class="line">        &#125;</span><br><span class="line">        activityInit();</span><br><span class="line">    &#125;</span><br><span class="line">    public void activityInit()&#123;</span><br><span class="line">        edit_account = (EditText) findViewById(R.id.et_login_account);</span><br><span class="line">        edit_account.setOnEditorActionListener(new TextView.OnEditorActionListener()&#123;</span><br><span class="line">            @Override</span><br><span class="line">            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) &#123;</span><br><span class="line">                if(actionId == EditorInfo.IME_ACTION_DONE)&#123;</span><br><span class="line">                    edit_account.clearFocus();</span><br><span class="line">                &#125;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        edit_password = (EditText)findViewById(R.id.et_login_password);</span><br><span class="line">        //密码隐藏</span><br><span class="line">        edit_password.setTransformationMethod(PasswordTransformationMethod.getInstance());</span><br><span class="line">        edit_password.setOnEditorActionListener(new TextView.OnEditorActionListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) &#123;</span><br><span class="line">                if(actionId == EditorInfo.IME_ACTION_DONE)&#123;</span><br><span class="line">                    edit_password.clearFocus();</span><br><span class="line">                &#125;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        btn_login = (Button)findViewById(R.id.btn_login);</span><br><span class="line">        btn_register = (Button)findViewById(R.id.btn_sign_up);</span><br><span class="line">        btn_login.setOnClickListener(this);</span><br><span class="line">        btn_register.setOnClickListener(this);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view)&#123;</span><br><span class="line">        switch(view.getId())&#123;</span><br><span class="line">            case R.id.btn_login:</span><br><span class="line">                if(edit_account.getText().toString().trim().equals(&quot;&quot;)|edit_password.getText().toString().trim().equals(&quot;&quot;))&#123;</span><br><span class="line">                    Toast.makeText(this,&quot;请完善您的信息&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    userInfoIsRight();</span><br><span class="line">                &#125;</span><br><span class="line">                break;</span><br><span class="line">            case R.id.btn_sign_up:</span><br><span class="line">                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);</span><br><span class="line">                startActivity(intent);</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    protected void userInfoIsRight()&#123;</span><br><span class="line">        if(isRight(edit_account.getText().toString(),edit_password.getText().toString()))&#123;</span><br><span class="line">            Intent i = new Intent(LoginActivity.this,MainActivity.class);</span><br><span class="line">            startActivity(i);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            Toast.makeText(this,&quot;账号或密码错误&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public boolean isRight(String edit_account, String edit_password)&#123;</span><br><span class="line">        dbHelper=new DBHelper(this,DBHelper.DATABASE_NAME,null,DBHelper.DATABASE_VERSION);//对dbHelper进行实体化</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br><span class="line">        String sql = &quot;Select * from usertable where username = ? and password = ?&quot;;</span><br><span class="line">        Cursor cursor = db.rawQuery(sql, new String[]&#123;edit_account, edit_password&#125;);</span><br><span class="line">        if(cursor.moveToFirst())&#123;</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在金韬学长的帮助下，我成功找到了Bug<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br></pre></td></tr></table></figure></p>
+<p>我在之前只是声明了dbHelper,但是并没有给他任何实体，所以它不能调用方法。<br>修改方案就是给它一个实体<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbHelper=new DBHelper(this,DBHelper.DATABASE_NAME,null,DBHelper.DATABASE_VERSION);//对dbHelper进行实体化</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br></pre></td></tr></table></figure></p>
+<p>然后就成功了。</p>
 
       
     </div>
@@ -432,9 +410,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/PTA/" rel="tag"><i class="fa fa-tag"></i> PTA</a>
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
           
-            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+            <a href="/tags/Debug/" rel="tag"><i class="fa fa-tag"></i> Debug</a>
           
         </div>
       
@@ -447,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/Android-PressBarr重复出现/" rel="next" title="Android-PressBarr重复出现">
-                <i class="fa fa-chevron-left"></i> Android-PressBarr重复出现
+              <a href="/2019/03/30/Cusor那点事/" rel="next" title="Cusor那点事">
+                <i class="fa fa-chevron-left"></i> Cusor那点事
               </a>
             
           </div>
@@ -456,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/08/开学一周回顾/" rel="prev" title="开学一周回顾">
-                开学一周回顾 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,17 +485,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,22 +555,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1029-旧键盘-（20-分）"><span class="nav-number">1.</span> <span class="nav-text">1029 旧键盘 （20 分）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点总结："><span class="nav-number">1.1.</span> <span class="nav-text">知识点总结：</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
