@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
+<meta name="description" content="Cusor那点事">
 <meta name="keywords" content="Android,cusor,SQLite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cusor那点事">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/Cusor那点事/index.html">
 <meta property="og:site_name" content="Han1254">
-<meta property="og:description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
+<meta property="og:description" content="Cusor那点事">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20161201161718716">
-<meta property="og:updated_time" content="2019-03-29T23:30:28.821Z">
+<meta property="og:updated_time" content="2019-03-30T11:17:46.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cusor那点事">
-<meta name="twitter:description" content="Cusor那点事今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：12345678910public boolean isRight(String edit_account, String edit_password)&amp;#123;        SQLiteDatabase db = dbHelper.getWritableDatabase();        S">
+<meta name="twitter:description" content="Cusor那点事">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20161201150546871?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 
 
@@ -368,7 +368,8 @@
       
 
       
-        <h1 id="Cusor那点事"><a href="#Cusor那点事" class="headerlink" title="Cusor那点事"></a>Cusor那点事</h1><p>今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isRight(String edit_account, String edit_password)&#123;</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br><span class="line">        String sql = &quot;Select * from usertable where username = ? and password = ?&quot;;</span><br><span class="line">        Cursor cursor = db.rawQuery(sql, new String[]&#123;edit_account, edit_password&#125;);</span><br><span class="line">        if(cursor.moveToFirst())&#123;</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Cusor那点事"><a href="#Cusor那点事" class="headerlink" title="Cusor那点事"></a>Cusor那点事</h1><a id="more"></a>
+<p>今天写一个登陆界面，到最后判断账号密码的时候，看了一些别人的源码，用到了下面的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isRight(String edit_account, String edit_password)&#123;</span><br><span class="line">        SQLiteDatabase db = dbHelper.getWritableDatabase();</span><br><span class="line">        String sql = &quot;Select * from usertable where username = ? and password = ?&quot;;</span><br><span class="line">        Cursor cursor = db.rawQuery(sql, new String[]&#123;edit_account, edit_password&#125;);</span><br><span class="line">        if(cursor.moveToFirst())&#123;</span><br><span class="line">            cursor.close();</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p><em>emmm~ Cusor 王德发！！！！！这是啥 ?</em><br>上网搜索了一下，cusor是英语‘光标’的意思  </p>
 <hr>
 <h2 id="关于-Cursor"><a href="#关于-Cursor" class="headerlink" title="关于 Cursor"></a>关于 Cursor</h2><p>在你理解和使用 Android Cursor 的时候你必须先知道关于 Cursor 的几件事情：<br>Cursor 是每行的集合。使用 moveToFirst() 定位第一行。你必须知道每一列的名称。你必须知道每一列的数据类型。Cursor 是一个随机的数据源。所有的数据都是通过下标取得。   </p>
