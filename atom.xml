@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-30T11:06:58.567Z</updated>
+  <updated>2019-03-31T00:54:26.090Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第四周学习进度</title>
+    <link href="http://yoursite.com/2019/03/30/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/"/>
+    <id>http://yoursite.com/2019/03/30/第四周学习进度/</id>
+    <published>2019-03-30T12:57:46.000Z</published>
+    <updated>2019-03-31T00:54:26.090Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本周学习进度"><a href="#本周学习进度" class="headerlink" title="本周学习进度"></a>本周学习进度</h1><a id="more"></a>  <h2 id="Android"><a href="#Android" class="headerlink" title="Android:"></a>Android:</h2><ul><li>ReBy的登陆和注册功能基本完成。使用了SQLite方法进行数据储存。不足之处：还没有实现自动登陆功能。 </li></ul><p><img src="/2019/03/30/第四周学习进度/1.jpg" alt> <img src="/2019/03/30/第四周学习进度/2.jpg" alt>  </p><ul><li><p>在学长的帮助下，利用Debug功能修改代码。<br>–&gt;<a href="https://han1254.github.io/2019/03/30/Debug日志-Android-SQLite/#more" target="_blank" rel="noopener">Debug日志-Android-SQLite</a></p></li><li><p>学习了利用Cursor的moveToFirst()方法，判断账号是否已经存在于数据库中，cursor的具体实现原理我写到了gitbub中。<br>–&gt;<a href="https://github.com/han1254/Study/blob/master/Android/Cursor那点事.md" target="_blank" rel="noopener">Cursor那点事</a></p></li><li>在学长的指导下，学习使用values,里面的数据相当于是全局变量，通过引用，方便以后的数据更改，从而使自己的代码更加规范。</li></ul><hr><p>除此之外，在写app的过程中，还学习了一些比较小的技巧。</p><ul><li>trim函数</li><li>设置下划线和光标的颜色</li><li>设置按钮的描边</li><li>设置Edittext的输入限制  </li><li>状态栏的透明与半透明</li><li>ActionBar的删除  </li><li>状态栏的颜色设置</li><li>活动的启动模式</li><li>密码的隐藏</li><li>git删除远程仓库的文件夹<br>这些小技巧的用法我已经总结下来并且传到了github中。<br>–&gt;<a href="https://github.com/han1254/Study/blob/master/Android/LittleTip.md" target="_blank" rel="noopener">LittleTip</a></li></ul><hr><h1 id="下周计划："><a href="#下周计划：" class="headerlink" title="下周计划："></a>下周计划：</h1><h2 id="Reby"><a href="#Reby" class="headerlink" title="Reby"></a>Reby</h2><ul><li>完成自动登陆功能</li><li>利用Fragment完成利用底部导航栏进行界面切换的功能。</li><li>完成推出登陆功能<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2>由于上半学期一直没好好学算法，导致自己的工很不扎实。下周开始，利用PTA，尽量达到每一到两天一道算法题（利用Java和C++都实现一下）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;本周学习进度&quot;&gt;&lt;a href=&quot;#本周学习进度&quot; class=&quot;headerlink&quot; title=&quot;本周学习进度&quot;&gt;&lt;/a&gt;本周学习进度&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="学习进度" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>Debug日志-Android-SQLite</title>
@@ -459,30 +483,6 @@
     
     
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java-继承与派生</title>
-    <link href="http://yoursite.com/2019/02/27/Java-%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F/"/>
-    <id>http://yoursite.com/2019/02/27/Java-继承与派生/</id>
-    <published>2019-02-27T12:52:18.000Z</published>
-    <updated>2019-03-02T01:48:45.038Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于Java的学习，我现在主要是在B站的<a href="https://www.bilibili.com/video/av37316788/?p=32" target="_blank" rel="noopener">【SiKi学院JavaEE】Java编程学习</a><br><a id="more"></a><br>今天呢，我已经学习到继承与派生。关键知识点有：  </p><ol><li><strong>继承关键字</strong><br><code>extends</code>   <h2 id><a href="#" class="headerlink" title="  "></a><img src="/2019/02/27/Java-继承与派生/继承.PNG" alt>  </h2></li><li><strong>父类里的私有成员</strong><br>需要用父类里的公有成员函数进行访问和赋值修改。  </li></ol><hr><ol start="3"><li><strong>父类的构造方法调用</strong>  </li></ol><ul><li>利用super方法，如下图：<br><img src="/2019/02/27/Java-继承与派生/父类.PNG" alt><br><img src="/2019/02/27/Java-继承与派生/父类的构造调用.PNG" alt> </li><li>子类调用无参的构造方法时，父类如果存在有参的构造方法，必须也得有无参构造方法。  </li><li>调用其他构造方法<br><img src="/2019/02/27/Java-继承与派生/调用其他构造.PNG" alt><br><img src="/2019/02/27/Java-继承与派生/this调用构造-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/this调用2-1.png" alt>  <h2 id="注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。"><a href="#注意：通过-this和-super调用其他构造方法的时候，必须在第一条语句。" class="headerlink" title="注意：通过 this和 super调用其他构造方法的时候，必须在第一条语句。"></a><strong><em>注意</em></strong>：<em>通过 this和 super调用其他构造方法的时候，必须在第一条语句。</em></h2></li></ul><ol start="4"><li><strong>继承的特点</strong><br>Java支持单继承但不支持多继承。</li></ol><hr><ol start="5"><li><strong>就近原则</strong><br><img src="/2019/02/27/Java-继承与派生/4.PNG" alt><br><img src="/2019/02/27/Java-继承与派生/1-1.PNG" alt><br><img src="/2019/02/27/Java-继承与派生/2-1.png" alt><br><img src="/2019/02/27/Java-继承与派生/3-1.png" alt></li></ol><hr><ol start="6"><li><strong>overload,override,final</strong><br><img src="/2019/02/27/Java-继承与派生/6.PNG" alt><br><strong><em>注意</em></strong>：<em>final在修饰方法的时候，要跟在权限的后面</em><br>例如：<code>public final void eat()</code></li></ol><hr><p>接下来就是技术推广时间～(￣▽￣～)   (～￣▽￣)～  </p><hr><p> <strong>**小技巧：</strong>/(@0_0@)/ LittleTips*<em>:<br>[<code>Ctrl+shift+k</code> </em>取消注释* ]</p><hr><p>&lt;(￣ˇ￣)/债见！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对于Java的学习，我现在主要是在B站的&lt;a href=&quot;https://www.bilibili.com/video/av37316788/?p=32&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;【SiKi学院JavaEE】Java编程学习&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-      <category term="面向对象" scheme="http://yoursite.com/categories/Java/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
