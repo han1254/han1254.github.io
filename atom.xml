@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-16T10:17:31.409Z</updated>
+  <updated>2019-05-19T06:09:31.052Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode_最长公共前缀</title>
+    <link href="http://yoursite.com/2019/05/18/leetcode-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+    <id>http://yoursite.com/2019/05/18/leetcode-最长公共前缀/</id>
+    <published>2019-05-18T04:00:21.000Z</published>
+    <updated>2019-05-19T06:09:31.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>编写一个函数来查找字符串数组中的最长公共前缀。<br>如果不存在公共前缀，返回空字符串 “”。  </p><blockquote><p>示例 1:<br>输入: [“flower”,”flow”,”flight”]<br>输出: “fl”  </p></blockquote><blockquote><p>示例 2:<br>输入: [“dog”,”racecar”,”car”]<br>输出: “”<br>解释: 输入不存在公共前缀。  </p></blockquote><a id="more"></a><h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    public String maxCommon(String[] s)&#123;</span><br><span class="line">        if ( s.length == 0 )&#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        String len = s[0];</span><br><span class="line">        for ( int i = 1; i &lt; s.length; i++)&#123;</span><br><span class="line">           while( s[i].indexOf(len) != 0 )&#123;</span><br><span class="line">                len = len.substring(0, len.length() - 1);</span><br><span class="line">                if(len.isEmpty())&#123;</span><br><span class="line">                    return &quot;&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="先看看是不是空的"><a href="#先看看是不是空的" class="headerlink" title="先看看是不是空的"></a>先看看是不是空的</h2><p>如果s根本就没有任何数据，那还判断毛线？直接返回个空字符串就行了呗；</p><h2 id="找一个串当基础"><a href="#找一个串当基础" class="headerlink" title="找一个串当基础"></a>找一个串当基础</h2><p>反正是找公共前缀，那么这个公共前缀一定存在于每个串中。那么我就拿第一个字符串s[0]当一个基础，声明一个字符串len,等于s[0];</p><h2 id="循环判断"><a href="#循环判断" class="headerlink" title="循环判断"></a>循环判断</h2><p>从第二个字符串开始，进行判断。利用indesOf()方法，看看len是不是在s[i]字符串中并且是不是从0下标开始的。</p><ul><li>如果是，终止while循环</li><li>如果不是，那就让len减去最后一个字符，继续循环。<ul><li>如果一直循环到len人家一点不剩了，s[i]里面还是没有跟它一致的，那凉了，这几个字符串没有公共前缀。返回空字符串。<h2 id="一直循环下去"><a href="#一直循环下去" class="headerlink" title="一直循环下去"></a>一直循环下去</h2>最后返回len就可以了。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;编写一个函数来查找字符串数组中的最长公共前缀。&lt;br&gt;如果不存在公共前缀，返回空字符串 “”。  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;示例 1:&lt;br&gt;输入: [“flower”,”flow”,”flight”]&lt;br&gt;输出: “fl”  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;示例 2:&lt;br&gt;输入: [“dog”,”racecar”,”car”]&lt;br&gt;输出: “”&lt;br&gt;解释: 输入不存在公共前缀。  &lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Leetcode" scheme="http://yoursite.com/categories/Leetcode/"/>
+    
+      <category term="最长公共前缀" scheme="http://yoursite.com/categories/Leetcode/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode_整数转罗马数字</title>
     <link href="http://yoursite.com/2019/05/16/leetcode-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/"/>
     <id>http://yoursite.com/2019/05/16/leetcode-整数转罗马数字/</id>
     <published>2019-05-16T09:46:42.000Z</published>
-    <updated>2019-05-16T10:17:31.409Z</updated>
+    <updated>2019-05-16T13:50:35.699Z</updated>
     
     <content type="html"><![CDATA[<p>罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">字符          数值</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p><ul><li>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</li><li>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </li><li>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。 </li></ul><p>给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内。</p><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String intToRoman(int num) &#123;</span><br><span class="line"></span><br><span class="line">        //create an unique dictionary</span><br><span class="line"></span><br><span class="line">        int [] values= &#123;1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1&#125;;</span><br><span class="line">        String[]  rom= &#123;&quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;&#125;;</span><br><span class="line">        int a;</span><br><span class="line">        StringBuilder str = new StringBuilder();</span><br><span class="line">        for ( int i = 0; i &lt; values.length; i++) &#123;</span><br><span class="line">            a = num / values[i];</span><br><span class="line">            if ( a == 0) &#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            for ( int j = a; j &gt; 0; j--)&#123;</span><br><span class="line">                str.append(rom[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            num = num - values[i] * a;</span><br><span class="line">            if ( num == 0)&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return str.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="这个代码有几点很关键"><a href="#这个代码有几点很关键" class="headerlink" title="这个代码有几点很关键"></a>这个代码有几点很关键</h2><ul><li>创建字典</li><li>a 的使用</li></ul><p>创建字典大家应该都很清楚，一个数组和一个字符串数组，两者的下标对应；</p><h2 id="接下来就是重点了："><a href="#接下来就是重点了：" class="headerlink" title="接下来就是重点了："></a>接下来就是重点了：</h2><p>咱们先拿一个数当例子 比如58</p><ul><li>总共就这几个罗马数字，先从大到小遍历。</li><li>58 / 1000 ？不行，1000太大，58承受不住；900 ？ 500？ 90？ 50？ 停，50可以哎，先把 L 选上。 几个L？<code>a = num / values[i] = 1</code>, 一个，好，那就先用str.append()方法把i下标对应的罗马数字加到str里面。</li><li>58 里已经确定有一个L了，还剩下多少？<code>num - a * values[i] = 8</code>，</li><li>继续轮回，40？ 10？ 9？ 5可以，<code>a = num / values[i] = 1</code>，再追加一个V。现在是LV了,还剩<code>num = num - a * values[i] = 3</code>。</li><li>最后一轮，<code>a = num / values[i] = 3</code>， 再追加三个I。即 LVIII；</li></ul><h2 id="最后很重要的一点，返回的是str-toString"><a href="#最后很重要的一点，返回的是str-toString" class="headerlink" title="最后很重要的一点，返回的是str.toString()"></a>最后很重要的一点，返回的是str.toString()</h2>]]></content>
     
@@ -31,9 +63,9 @@
     
     </summary>
     
-      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+      <category term="Leetcode" scheme="http://yoursite.com/categories/Leetcode/"/>
     
-      <category term="整数转罗马数字" scheme="http://yoursite.com/categories/leetcode/%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/"/>
+      <category term="整数转罗马数字" scheme="http://yoursite.com/categories/Leetcode/%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/"/>
     
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
@@ -435,37 +467,6 @@
       <category term="PTA" scheme="http://yoursite.com/categories/PTA/"/>
     
       <category term="科学计数法" scheme="http://yoursite.com/categories/PTA/%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PTA--进制转换</title>
-    <link href="http://yoursite.com/2019/03/02/PTA-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
-    <id>http://yoursite.com/2019/03/02/PTA-进制转换/</id>
-    <published>2019-03-02T13:05:35.000Z</published>
-    <updated>2019-03-02T14:32:39.222Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="22-D进制的A-B（Java）"><a href="#22-D进制的A-B（Java）" class="headerlink" title="22. D进制的A+B（Java）"></a>22. D进制的A+B（Java）</h1><p>题目要求：  </p><blockquote><p>输入两个非负 10 进制整数 A 和 B (≤2^30−1)，输出 A+B 的 D (1&lt;D≤10)进制数。  </p></blockquote><blockquote><p><strong>输入格式</strong>：<br>输入在一行中依次给出 3 个整数 A、B 和 D。<br><a id="more"></a><br><strong>输出格式</strong>：<br>输出 A+B 的 D 进制数。   </p></blockquote><blockquote><p>输入样例：<br>123 456 8<br>输出样例：<br>1103   </p></blockquote><p><em>解析：其实这样的题不算难，但是自己老是记不住进制转换的方法，记录一下这个题，顺便用Java来实现一下。</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">public class Main &#123;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Scanner in = new Scanner(System.in);</span><br><span class="line"></span><br><span class="line">//int范围[-2^31-(2^31-1)]</span><br><span class="line"></span><br><span class="line">int A = in.nextInt();</span><br><span class="line"></span><br><span class="line">int B = in.nextInt();</span><br><span class="line"></span><br><span class="line">int D = in.nextInt();</span><br><span class="line"></span><br><span class="line">in.close();</span><br><span class="line"></span><br><span class="line">int sum = A + B;</span><br><span class="line"></span><br><span class="line">//用于将余数插入到StringBuffer中</span><br><span class="line"></span><br><span class="line">StringBuffer string = new StringBuffer();</span><br><span class="line"></span><br><span class="line">while(sum != 0)&#123;</span><br><span class="line"></span><br><span class="line">int temp = sum % D;</span><br><span class="line"></span><br><span class="line">string.append(temp);</span><br><span class="line"></span><br><span class="line">sum /= D;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//对StringBuffer内容进行倒序</span><br><span class="line"></span><br><span class="line">string.reverse();</span><br><span class="line"></span><br><span class="line">System.out.println(string);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">这时候我就疑惑了：`StringBuffer`是个什么鬼？  </span><br><span class="line">详情参见[菜鸟教程](http://www.runoob.com/java/java-stringbuffer.html)  </span><br><span class="line">&gt;**Java StringBuffer 和 StringBuilder 类**</span><br><span class="line"></span><br><span class="line">&gt;当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。 </span><br><span class="line">和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。 </span><br><span class="line">StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。 </span><br><span class="line">由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类。  </span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">Test.java 文件代码：</span><br></pre></td></tr></table></figure></p><p>public class Test{<br>  public static void main(String args[]){<br>    StringBuffer sBuffer = new StringBuffer(“菜鸟教程官网：”);<br>    sBuffer.append(“www”);<br>    sBuffer.append(“.runoob”);<br>    sBuffer.append(“.com”);<br>    System.out.println(sBuffer);<br>  }<br>}<br><code>`</code><br>结果：  </p><blockquote><p>菜鸟教程官网：<a href="http://www.runoob.com" target="_blank" rel="noopener">www.runoob.com</a></p></blockquote><p><strong>StringBuffer 方法</strong><br>序号|方法描述<br>-|-|-<br>1|public StringBuffer append(String s):将指定的字符串追加到此字符序列。<br>2| public StringBuffer reverse():将此字符序列用其反转形式取代。<br>3|public delete(int start, int end):移除此序列的子字符串中的字符。<br>4| public insert(int offset, int i):将 int 参数的字符串表示形式插入此序列中<br>5|replace(int start, int end, String str):使用给定 String 中的字符替换此序列的子字符串中的字符。<br>最后的结果如下：<br><img src="/2019/03/02/PTA-进制转换/1.PNG" alt>  </p><ul><li>还是只有一个测试点通不过，醉了。<strong>…（⊙＿⊙；）…</strong>  </li><li>为啥表格显示不出来？  </li><li>文字为啥跑到代码里面去了<strong>╮（╯＿╰）╭</strong></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;22-D进制的A-B（Java）&quot;&gt;&lt;a href=&quot;#22-D进制的A-B（Java）&quot; class=&quot;headerlink&quot; title=&quot;22. D进制的A+B（Java）&quot;&gt;&lt;/a&gt;22. D进制的A+B（Java）&lt;/h1&gt;&lt;p&gt;题目要求：  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入两个非负 10 进制整数 A 和 B (≤2^30−1)，输出 A+B 的 D (1&amp;lt;D≤10)进制数。  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;输入格式&lt;/strong&gt;：&lt;br&gt;输入在一行中依次给出 3 个整数 A、B 和 D。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="PTA" scheme="http://yoursite.com/categories/PTA/"/>
-    
-      <category term="进制转换" scheme="http://yoursite.com/categories/PTA/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
     
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
