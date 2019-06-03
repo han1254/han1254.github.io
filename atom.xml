@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-25T10:27:02.465Z</updated>
+  <updated>2019-06-03T07:17:58.750Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android_sharepreference_commit&amp;apply</title>
+    <link href="http://yoursite.com/2019/06/03/Android-sharepreference-commit-apply/"/>
+    <id>http://yoursite.com/2019/06/03/Android-sharepreference-commit-apply/</id>
+    <published>2019-06-03T07:11:56.000Z</published>
+    <updated>2019-06-03T07:17:58.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载自<a href="https://blog.csdn.net/jake9602/article/details/18414841" target="_blank" rel="noopener">SharedPreference.Editor的apply和commit方法异同</a><br><a id="more"></a><br>在android 中存储数据时经常用SharedPreference, 并且在提交数据时一直用的是Editor的commit方法, 今天无意了看到了系统用了apply,看了方法的介绍, 原来这个方法也是可以提交数据的.<br>apply方法在官方SDK说明如下：  </p><blockquote><p>Commit your preferences changes back from this Editor to the SharedPreferences object it is editing. This atomically performs the requested modifications, replacing whatever is currently in the SharedPreferences.<br>Note that when two editors are modifying preferences at the same time, the last one to call apply wins.<br>Unlike commit, which writes its preferences out to persistent storage synchronously, apply commits its changes to the in-memory SharedPreferences immediately but starts an asynchronous commit to disk and you won’t be notified of any failures. If another editor on this SharedPreferences does a regular commit while a apply is still outstanding, the commit will block until all async commits are completed as well as the commit itself.<br>As SharedPreferences instances are singletons within a process, it’s safe to replace any instance of commit with apply if you were already ignoring the return value.<br>You don’t need to worry about Android component lifecycles and their interaction with apply() writing to disk. The framework makes sure in-flight disk writes from apply() complete before switching states.<br>The SharedPreferences.Editor interface isn’t expected to be implemented directly. However, if you previously did implement it and are now getting errors about missing apply(), you can simply call commit from apply().    </p></blockquote><p>这两个方法的区别在于： </p><ol><li>apply没有返回值而commit返回boolean表明修改是否提交成功 </li><li>apply是将修改数据原子提交到内存, 而后异步真正提交到硬件磁盘, 而commit是同步的提交到硬件磁盘，因此，在多个并发的提交commit的时候，他们会等待正在处理的commit保存到磁盘后在操作，从而降低了效率。而apply只是原子的提交到内容，后面有调用apply的函数的将会直接覆盖前面的内存数据，这样从一定程度上提高了很多效率。 </li><li>apply方法不会提示任何失败的提示。<br>由于在一个进程中，sharedPreference是单实例，一般不会出现并发冲突，如果对提交的结果不关心的话，建议使用apply，当然需要确保提交成功且有后续操作的话，还是需要用commit的。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转载自&lt;a href=&quot;https://blog.csdn.net/jake9602/article/details/18414841&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SharedPreference.Editor的apply和commit方法异同&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+      <category term="sharedpreference" scheme="http://yoursite.com/categories/Android/sharedpreference/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-26-删除相同元素</title>
+    <link href="http://yoursite.com/2019/06/02/leetcode-08-%E5%88%A0%E9%99%A4%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0/"/>
+    <id>http://yoursite.com/2019/06/02/leetcode-08-删除相同元素/</id>
+    <published>2019-06-02T14:46:54.000Z</published>
+    <updated>2019-06-03T07:17:28.234Z</updated>
+    
+    <content type="html"><![CDATA[<p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。<br><a id="more"></a></p><p>示例 1:</p><blockquote><p>给定数组 nums = [1,1,2], </p></blockquote><blockquote><p>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </p></blockquote><blockquote><p>你不需要考虑数组中超出新长度后面的元素。</p></blockquote><p>示例 2:</p><blockquote><p>给定 nums = [0,0,1,1,1,2,2,3,3,4],</p></blockquote><blockquote><p>函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</p></blockquote><blockquote><p>你不需要考虑数组中超出新长度后面的元素。</p></blockquote><p><strong>说明:</strong></p><p><em>为什么返回数值是整数，但输出的答案是数组呢?</em></p><p><em>请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</em></p><p><em>你可以想象内部操作如下:</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">    public int removeDuplicates(int[] nums) &#123;</span><br><span class="line">        if( nums.length == 0)&#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">        int i = 0;</span><br><span class="line">        for( int j = 1; j &lt; nums.length; j++)&#123;</span><br><span class="line">            if( nums[j] != nums[i] )&#123;</span><br><span class="line">                i++;</span><br><span class="line">                nums[i] = nums[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return i+1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们以一个整型数组为例</p><blockquote><p>1 2 2 3 4</p></blockquote><p>传入的为数组的引用，所以更改对用户是可见的</p><ul><li>如果长度为零，直接返回零</li><li>如果不为零，i = 0；进入循环 j = 1;<ul><li>nums[j] = 2,nums[j] != nums[i] <ul><li>i++ 变成了1；</li><li>nums[i] = nums[j] = 2;</li></ul></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
+&lt;p&gt;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Leetcode" scheme="http://yoursite.com/categories/Leetcode/"/>
+    
+      <category term="删除相同元素" scheme="http://yoursite.com/categories/Leetcode/%E5%88%A0%E9%99%A4%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Green公式</title>
+    <link href="http://yoursite.com/2019/05/25/Green%E5%85%AC%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/05/25/Green公式/</id>
+    <published>2019-05-25T10:37:13.000Z</published>
+    <updated>2019-05-25T10:37:13.326Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode_合并链表</title>
@@ -403,76 +466,6 @@
       &lt;h1 id=&quot;Adapter&quot;&gt;&lt;a href=&quot;#Adapter&quot; class=&quot;headerlink&quot; title=&quot;Adapter&quot;&gt;&lt;/a&gt;Adapter&lt;/h1&gt;&lt;p&gt;在安卓学习中经常碰到适配器，之前都是按照书上的代码去写，今天看了一下Java教材，发现了它的用法。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;适配器模式：将一个类的接口转换成客户希望的另一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>开学一周回顾</title>
-    <link href="http://yoursite.com/2019/03/08/%E5%BC%80%E5%AD%A6%E4%B8%80%E5%91%A8%E5%9B%9E%E9%A1%BE/"/>
-    <id>http://yoursite.com/2019/03/08/开学一周回顾/</id>
-    <published>2019-03-08T13:30:32.000Z</published>
-    <updated>2019-03-08T14:14:54.073Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="开学一周回顾"><a href="#开学一周回顾" class="headerlink" title="开学一周回顾"></a>开学一周回顾</h1><p>第一周做的事情还挺多的，无论是班级事务还是学习，感觉还算充实。<br><a id="more"></a> </p><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><ul><li>安卓学习了ListView，并且给列表里的按钮配上了相应的活动，做成了一个水果小百科的形式，学会了在工程中新建类。<br><img src="/2019/03/08/开学一周回顾/1.jpg" alt><img src="/2019/03/08/开学一周回顾/2.jpg" alt></li><li>高数学到线性微分方程，前面还可以，但学到高阶线性的时候就蒙圈了  </li><li>用Java刷了一道PTA，用C++刷了一道题，学了容器、迭代器的一些用法。<br>–&gt;<a href="https://han1254.github.io/2019/03/05/PTA-旧键盘/" target="_blank" rel="noopener">PTA-旧键盘</a><br>–&gt;<a href="https://han1254.github.io/2019/03/04/PTA-科学计数法/" target="_blank" rel="noopener">PTA-科学计数法</a>    </li></ul><hr><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul><li>AS无法添加依赖库，书的版本跟现在的AS的版本不同，网上也没看到最新版本的教程，所以没法写，用不了RecyclerView.</li><li>Java学习的太慢，下周应该加速学习。要继续看网课。  </li><li>高数，离散，需要借助周末的时间赶紧复习。</li></ul><hr><h2 id="班级"><a href="#班级" class="headerlink" title="班级"></a>班级</h2><ul><li>发书  </li><li>班委会  </li><li>专业大会  </li><li>拍班级宣传视频  </li><li>重置快闪ppt  </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;开学一周回顾&quot;&gt;&lt;a href=&quot;#开学一周回顾&quot; class=&quot;headerlink&quot; title=&quot;开学一周回顾&quot;&gt;&lt;/a&gt;开学一周回顾&lt;/h1&gt;&lt;p&gt;第一周做的事情还挺多的，无论是班级事务还是学习，感觉还算充实。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="大一" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/"/>
-    
-      <category term="第二学期" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F/"/>
-    
-      <category term="第一周" scheme="http://yoursite.com/categories/%E5%A4%A7%E4%B8%80/%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F/%E7%AC%AC%E4%B8%80%E5%91%A8/"/>
-    
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PTA-旧键盘</title>
-    <link href="http://yoursite.com/2019/03/05/PTA-%E6%97%A7%E9%94%AE%E7%9B%98/"/>
-    <id>http://yoursite.com/2019/03/05/PTA-旧键盘/</id>
-    <published>2019-03-05T11:44:31.000Z</published>
-    <updated>2019-03-05T12:15:24.292Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1029-旧键盘-（20-分）"><a href="#1029-旧键盘-（20-分）" class="headerlink" title="1029 旧键盘 （20 分）"></a>1029 旧键盘 （20 分）</h1><p>旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。<br><a id="more"></a><br>输入格式：  </p><blockquote><p>输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字是不超过 80 个字符的串，由字母 A-Z（包括大、小写）、数字 0-9、以及下划线 _（代表空格）组成。题目保证 2 个字符串均非空。  </p></blockquote><p>输出格式：  </p><blockquote><p>按照发现顺序，在一行中输出坏掉的键。其中英文字母只输出大写，每个坏键只输出一次。题目保证至少有 1 个坏键。  </p></blockquote><p>输入样例：  </p><blockquote><p>7_This_is_a_test  </p></blockquote><blockquote><p>_hs_s_a_es  </p></blockquote><p>输出样例：  </p><blockquote><p>7TI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">// 1029.cpp : 定义控制台应用程序的入口点。</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">#include&lt;cctype&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    string input, output;</span><br><span class="line">    vector&lt;char&gt; v;</span><br><span class="line"></span><br><span class="line">    getline(cin, input);</span><br><span class="line">    getline(cin, output);</span><br><span class="line"></span><br><span class="line">    for (int i = 0,j=0; i &lt; input.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (input[i] != output[j])//如果不同即为缺失的</span><br><span class="line">        &#123;</span><br><span class="line">            if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br><span class="line"></span><br><span class="line">            v.push_back(input[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">            ++j;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vector&lt;char&gt;::iterator i,begin = v.begin(), end = v.end();</span><br><span class="line"></span><br><span class="line">    for (i = begin; i != end; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (find(begin, i, *i) == i)//如果前面未出现则输出（即发现*i的位置在i上）</span><br><span class="line">            cout &lt;&lt; *i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></blockquote><h2 id="知识点总结："><a href="#知识点总结：" class="headerlink" title="知识点总结："></a>知识点总结：</h2><ul><li><code>vector&lt;char&gt; v</code><br>创建一个char型的vector。<br>–&gt;<a href="https://www.cnblogs.com/zsq1993/p/5929806.html" target="_blank" rel="noopener">vector常用函数</a>   </li><li><code>v.push_back(input[i])</code><br>往容器里添加数据</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (islower(input[i]))//如果是小写，转为大写</span><br><span class="line">                input[i]=toupper(input[i]);</span><br></pre></td></tr></table></figure><p>大小写转换。  </p></li><li><code>vector&lt;char&gt;::iterator i</code><br>迭代器<br>–&gt;<a href="https://www.cnblogs.com/hdk1993/p/4419779.html" target="_blank" rel="noopener">c++迭代器（iterator）详解 </a>    </li><li><code>find(begin, i, *i) == i</code><br>–&gt;<a href="https://blog.csdn.net/sinat_34328764/article/details/79946650" target="_blank" rel="noopener">C++ find函数</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;1029-旧键盘-（20-分）&quot;&gt;&lt;a href=&quot;#1029-旧键盘-（20-分）&quot; class=&quot;headerlink&quot; title=&quot;1029 旧键盘 （20 分）&quot;&gt;&lt;/a&gt;1029 旧键盘 （20 分）&lt;/h1&gt;&lt;p&gt;旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-      <category term="迭代器的使用" scheme="http://yoursite.com/categories/C/%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    
-    
-      <category term="PTA" scheme="http://yoursite.com/tags/PTA/"/>
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android-PressBarr重复出现</title>
-    <link href="http://yoursite.com/2019/03/04/Android-PressBarr%E9%87%8D%E5%A4%8D%E5%87%BA%E7%8E%B0/"/>
-    <id>http://yoursite.com/2019/03/04/Android-PressBarr重复出现/</id>
-    <published>2019-03-04T14:21:18.000Z</published>
-    <updated>2019-03-04T14:21:18.487Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
