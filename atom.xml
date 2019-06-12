@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-03T07:17:58.750Z</updated>
+  <updated>2019-06-12T08:01:34.068Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NEUQOJ-1016-Roliygu&amp;Yilan</title>
+    <link href="http://yoursite.com/2019/06/12/NEUQOJ-1016-Roliygu-Yilan/"/>
+    <id>http://yoursite.com/2019/06/12/NEUQOJ-1016-Roliygu-Yilan/</id>
+    <published>2019-06-12T07:27:19.000Z</published>
+    <updated>2019-06-12T08:01:34.068Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><blockquote><p>Roliygu is famous because he likes to play games. Today he puts a chessboard in the desktop,and plays a game with Yilan. The size of the chessboard is n by n. A stone is placed in a corner square. They play alternatively with Roliygu having the first move. Each time,player is allowed to move the stone to an unvisited neighbor square horizontally or vertically. The one who can’t make a move will lose the game. If both play perfectly, who will win the game?</p></blockquote><a id="more"></a><h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><blockquote><p>The input is a sequence of positive integers each in a separate line. The integers are between 1 and 10 000,inclusive,indicating the size of the chessboard. The end of the input is indicated by a zero.  </p></blockquote><h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><blockquote><p>Output the winner(“Roliygu” or “Yilan”) for each input line except the last zero. No other characters should be inserted in the output.</p></blockquote><h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><p>This question is hard if we try to solve it just as the description of the question, however, we can change our mind to think about the question, can we get the result of who will win if we just know the <strong>odevity</strong> of the grid of the board and the <strong>upper-hand player</strong>? The anwser is YES!</p><p>Let’s look at the two pictures below:</p><p><img src="/2019/06/12/NEUQOJ-1016-Roliygu-Yilan/1.jpg" alt></p><p><img src="/2019/06/12/NEUQOJ-1016-Roliygu-Yilan/2.jpg" alt></p><p>if the grids’ number is even, if obvious that all of the grids and be divided into some pices of 1*2, what is very important for you to know is that the start point is in one grid, so the left grids’ number is actually odd, so you can know that <strong>who first, who win</strong>;</p><p>In the same way we can know that if the grids’ number is odd, the number except the start point will be even, so <strong>who later, who win</strong>;</p><p>So the question has been changed into <strong>Jugement of the odevity of the board’s grids number</strong>, it’s easy, isn’t it?</p><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    while(cin&gt;&gt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        if(n == 0)</span><br><span class="line">        &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(n * n % 2 == 0)</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;&quot;Roliygu&quot;&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;&quot;Yilan&quot;&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Roliygu is famous because he likes to play games. Today he puts a chessboard in the desktop,and plays a game with Yilan. The size of the chessboard is n by n. A stone is placed in a corner square. They play alternatively with Roliygu having the first move. Each time,player is allowed to move the stone to an unvisited neighbor square horizontally or vertically. The one who can’t make a move will lose the game. If both play perfectly, who will win the game?&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="NEUQOJ" scheme="http://yoursite.com/categories/NEUQOJ/"/>
+    
+      <category term="1016" scheme="http://yoursite.com/categories/NEUQOJ/1016/"/>
+    
+    
+      <category term="OJ" scheme="http://yoursite.com/tags/OJ/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>some idea about sign out</title>
+    <link href="http://yoursite.com/2019/06/04/some-idea-about-sign-out/"/>
+    <id>http://yoursite.com/2019/06/04/some-idea-about-sign-out/</id>
+    <published>2019-06-04T01:37:43.000Z</published>
+    <updated>2019-06-04T01:37:43.130Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Android_sharepreference_commit&amp;apply</title>
@@ -420,52 +462,6 @@
     <updated>2019-03-19T03:04:55.189Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python安装</title>
-    <link href="http://yoursite.com/2019/03/19/Python%E5%AE%89%E8%A3%85/"/>
-    <id>http://yoursite.com/2019/03/19/Python安装/</id>
-    <published>2019-03-18T16:05:36.000Z</published>
-    <updated>2019-03-18T17:49:37.416Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="PyCharm的安装"><a href="#PyCharm的安装" class="headerlink" title="PyCharm的安装"></a>PyCharm的安装</h1><p>这个文章算是一个帮助文档吧。︿(￣︶￣)︿<br><a id="more"></a><br>废话不多说  </p><ul><li>第一步，安装Python（注意，这个不是编译器）</li></ul><p><img src="/2019/03/19/Python安装/1.PNG" alt><br>–&gt;<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">￥￥￥python官方下载网址￥￥￥</a><br>–&gt;<em>一定要记住自己的安装路径，要不然找起来很麻烦的,别问我怎么知道的</em><br><img src="/2019/03/19/Python安装/3.jpg" alt> </p><p>这个过程是为了让你的电脑有一个能编译Python的环境，装上它，配置好环境，你就能在电脑上写python。<br>但是——下载完成后，还不不能直接编写python。 </p><hr><p><strong>现在有两种方法供你选择（如果你想简单一点的话，可以直接看方法2）</strong>：</p><h2 id="一-配置环境变量法"><a href="#一-配置环境变量法" class="headerlink" title="一.配置环境变量法"></a>一.配置环境变量法</h2><p>正如之前所说，你需要给电脑配置一个环境，那么现在就涉及到环境变量的配置上了。  </p><ul><li>第一步，右击我的电脑，找到属性，点击。<br>然后点击高级系统设置。<br><img src="/2019/03/19/Python安装/4.PNG" alt>   </li><li>点击环境变量<br><img src="/2019/03/19/Python安装/5.PNG" alt>    </li><li>然后就在系统变量里面找，找一个叫Path或者PATH的东西，别管它是干嘛的，找就行了。<br><img src="/2019/03/19/Python安装/6.PNG" alt>   </li><li>哇，找到了！╰(￣▽￣)╭<br><img src="/2019/03/19/Python安装/7.PNG" alt>   </li><li>双击它，然后就会弹出一个好奇妙的东西<br><img src="/2019/03/19/Python安装/8.PNG" alt>   </li><li>我早就提醒过你去记住安装路径的。比如我的就被默认安装到了C盘<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\han1254\AppData\Local\Programs\Python\Python37-32</span><br></pre></td></tr></table></figure></li></ul><p>把你的路径复制下来，然后找一个空白的格子，双击，然后粘贴进去<br><img src="/2019/03/19/Python安装/9.PNG" alt>   </p><ul><li>接下来就是要见证奇迹了<br>按住电脑的win键（就是那个画着Windows图标的键）和字母R键，<br>会出现这么个鬼东西<br><img src="/2019/03/19/Python安装/10.PNG" alt>   </li><li>像我一样，在里面输入cmd,回车<br><img src="/2019/03/19/Python安装/11.PNG" alt><br>哇，黑框框 </li><li>输入<code>python</code> ，出现下图情况，估计就可以了<br><img src="/2019/03/19/Python安装/13.PNG" alt> </li><li>接下来你就可以写程序了<br><img src="/2019/03/19/Python安装/14.PNG" alt> </li><li><h2 id="然而你是不会甘愿就对着个黑框框写程序的"><a href="#然而你是不会甘愿就对着个黑框框写程序的" class="headerlink" title="然而你是不会甘愿就对着个黑框框写程序的"></a>然而你是不会甘愿就对着个黑框框写程序的</h2>所以，要用一个颜值高一点的编译器<br>当~当~当~当，PyCharm<br><img src="/2019/03/19/Python安装/15.PNG" alt><br>–&gt;<a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">PyCharm下载链接</a><br>记住，下载community版本的，professional的太大了。<br><img src="/2019/03/19/Python安装/16.PNG" alt><br>然后下载安装就行了。<br>在开始页面新建project，会出现如下界面<br><img src="/2019/03/19/Python安装/17.PNG" alt><br>untitle说明没有名字，改个名字，不改也行，我改成hello,示范一下。<br><img src="/2019/03/19/Python安装/18.PNG" alt><br>然后在我标的地方，右键-&gt;new-&gt;PythonFile,写代码，运行<br><img src="/2019/03/19/Python安装/21.PNG" alt></li></ul><h2 id="二-直接法"><a href="#二-直接法" class="headerlink" title="二.直接法"></a>二.直接法</h2><ul><li>第一步，下载python</li><li>第二步，下载PyCharm</li><li>第三步，如果你没有配置环境的话，那么下图里，我画红圈的地方是啥都没有的。</li></ul><p><img src="/2019/03/19/Python安装/22.PNG" alt><br>点击省略号<br><img src="/2019/03/19/Python安装/24.PNG" alt><br>再点击，他会出现一个树状图让你选文件夹，也就是你下载python的文件夹。<br><img src="/2019/03/19/Python安装/25.PNG" alt><br>大概就像这个图里显示的路径一样，一定要选到python.exe<br><img src="/2019/03/19/Python安装/26.PNG" alt><br>不要忘了勾选这个，要不你每次创建项目都要设置<br><img src="/2019/03/19/Python安装/27.PNG" alt></p><h2 id="电脑快没电了，如果我的教程不清楚，下面还有一个"><a href="#电脑快没电了，如果我的教程不清楚，下面还有一个" class="headerlink" title="电脑快没电了，如果我的教程不清楚，下面还有一个"></a>电脑快没电了，如果我的教程不清楚，下面还有一个</h2><p><a href="http://www.runoob.com/w3cnote/pycharm-windows-install.html" target="_blank" rel="noopener">PyCharm 安装教程（Windows）</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;PyCharm的安装&quot;&gt;&lt;a href=&quot;#PyCharm的安装&quot; class=&quot;headerlink&quot; title=&quot;PyCharm的安装&quot;&gt;&lt;/a&gt;PyCharm的安装&lt;/h1&gt;&lt;p&gt;这个文章算是一个帮助文档吧。︿(￣︶￣)︿&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-      <category term="pycharm的安装" scheme="http://yoursite.com/categories/Python/pycharm%E7%9A%84%E5%AE%89%E8%A3%85/"/>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-      <category term="install" scheme="http://yoursite.com/tags/install/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Adapter</title>
-    <link href="http://yoursite.com/2019/03/18/Adapter/"/>
-    <id>http://yoursite.com/2019/03/18/Adapter/</id>
-    <published>2019-03-18T14:10:09.000Z</published>
-    <updated>2019-03-18T14:12:04.974Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h1><p>在安卓学习中经常碰到适配器，之前都是按照书上的代码去写，今天看了一下Java教材，发现了它的用法。</p><blockquote><p>适配器模式：将一个类的接口转换成客户希望的另一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作<br><a id="more"></a></p></blockquote><p>适配器属于结构模式<br>结构目标包含：  </p><ul><li>目标  </li><li>被适配者  </li><li>适配者 </li></ul><h2 id="一-类适配器"><a href="#一-类适配器" class="headerlink" title="一.类适配器"></a>一.类适配器</h2><p>原理：通过继承实现适配<br>当我们要访问的接口A中没有我们想要的方法 ，却在另一个接口B中发现了合适的方法，我们又不能改变访问接口A，在这种情况下，我们可以定义一个适配器p来进行中转，这个适配器p要实现我们访问的接口A，这样我们就能继续访问当前接口A中的方法（虽然它目前不是我们的菜），然后再继承接口B的实现类BB，这样我们可以在适配器P中访问接口B的方法了，这时我们在适配器P中的接口A方法中直接引用BB中的合适方法，这样就完成了一个简单的类适配器。  </p><blockquote><p>详见下方实例：我们以ps2与usb的转接为例  </p></blockquote><p>ps2接口：Ps2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Ps2 &#123;</span><br><span class="line">     void isPs2();</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p><p>USB接口：Usb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> public interface Usb &#123;</span><br><span class="line">    void isUsb();</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">USB接口实现类：Usber</span><br></pre></td></tr></table></figure></p><p>public class Usber implements Usb {</p><pre><code>@Overridepublic void isUsb() {    System.out.println(&quot;USB口&quot;);}</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">适配器：Adapter</span><br></pre></td></tr></table></figure></p><p>public class Adapter extends Usber implements Ps2 {</p><pre><code>@Overridepublic void isPs2() {    isUsb();}</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试方法：Clienter</span><br></pre></td></tr></table></figure></p><p>public class Clienter {</p><pre><code>public static void main(String[] args) {    Ps2 p = new Adapter();    p.isPs2();}</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示结果：</span><br></pre></td></tr></table></figure></p><p>USB口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">## 二.对象适配器模式 ##</span><br><span class="line">　　原理：通过组合来实现适配器功能。  </span><br><span class="line">　　当我们要访问的接口A中没有我们想要的方法 ，却在另一个接口B中发现了合适的方法，我们又不能改变访问接口A，在这种情况下，我们可以定义一个适配器p来进行中转，这个适配器p要实现我们访问的接口A，这样我们就能继续访问当前接口A中的方法（虽然它目前不是我们的菜），然后在适配器P中定义私有变量C（对象）（B接口指向变量名），再定义一个带参数的构造器用来为对象C赋值，再在A接口的方法实现中使用对象C调用其来源于B接口的方法。</span><br><span class="line">&gt;下方实例用直流电和交流电之间的转换来演示    </span><br><span class="line"></span><br><span class="line">Target：DirectCurrent接口</span><br></pre></td></tr></table></figure></p><p>//目标<br>public interface DirectCurrent {<br>    public String giveDirectCurrent();</p><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Adaptee: 一个已经存在的接口或者抽象类 在本例子中就是      AlternateCurrent接口。</span><br></pre></td></tr></table></figure></p><p>//被适配者(Adaptee)，一个已经存在的接口或者抽象类<br>public interface AlternateCurrent {<br>    public String giveAlternateCrruent();</p><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Adapter: 对被适配者接口（抽象类）与目标接口进行适配。本例中为ElectricAdapter</span><br></pre></td></tr></table></figure></p><p>public class ElectricAdapter implements DirectCurrent{</p><pre><code>AlternateCurrent out;ElectricAdapter(AlternateCurrent out) {    this.out=out;}@Overridepublic String giveDirectCurrent() {    String m = out.giveAlternateCrruent();    StringBuffer str = new StringBuffer(m);    for(int i=0;i&lt;str.length();i++) {        if(str.charAt(i)==&apos;0&apos;)        {            str.setCharAt(i, &apos;1&apos;);        }    }    m=new String(str);    return m;}</code></pre><p>}</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application</span><br></pre></td></tr></table></figure><p>public class Application {<br>    public static void main(String[] args) {<br>        AlternateCurrent aElectric = new PowerCompany();<br>        Wash wash = new Wash();<br>        wash.turnOn(aElectric);<br>        DirectCurrent dElectric = new ElectricAdapter(aElectric);<br>        Recorder recorder = new Recorder();<br>        recorder.turnOn(dElectric);</p><pre><code>}</code></pre><p>}<br>class PowerCompany implements AlternateCurrent{</p><pre><code>public String giveAlternateCrruent() {    return &quot;101010101010101010&quot;;}    </code></pre><p>}<br>class Wash{<br>    String name;<br>    Wash(){<br>        name=”洗衣机”;<br>    }<br>    Wash(String s){<br>        name=s;<br>    }<br>    public void turnOn(AlternateCurrent a) {<br>        String s= a.giveAlternateCrruent();<br>        System.out.println(name+”使用交流电：\n”+s);<br>        System.out.println(“开始洗衣服”);<br>    }<br>}<br>class Recorder{<br>    String name;<br>    Recorder(){<br>        name=”录音机”;<br>    }<br>    Recorder(String s){<br>        name=s;<br>    }<br>    public void turnOn(DirectCurrent a) {<br>        String s = a.giveDirectCurrent();<br>        System.out.println(name+”使用直流电：\n”+s);<br>        System.out.println(“开始录音”);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">结果：</span><br></pre></td></tr></table></figure></p><p>洗衣机使用交流电：<br>101010101010101010<br>开始洗衣服<br>录音机使用直流电：<br>111111111111111111<br>开始录音<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">## 三.接口适配器模式 ##</span><br><span class="line">　　原理：通过抽象类来实现适配，这种适配稍别于上面所述的适配。  </span><br><span class="line">　　当存在这样一个接口，其中定义了N多的方法，而我们现在却只想使用其中的一个到几个方法，如果我们直接实现接口，那么我们要对所有的方法进行实现，哪怕我们仅仅是对不需要的方法进行置空（只写一对大括号，不做具体方法实现）也会导致这个类变得臃肿，调用也不方便，这时我们可以使用一个抽象类作为中间件，即适配器，用这个抽象类实现接口，而在抽象类中所有的方法都进行置空，那么我们在创建抽象类的继承类，而且重写我们需要使用的那几个方法即可。  </span><br><span class="line">目标接口：A</span><br></pre></td></tr></table></figure></p><p>public interface A {<br>    void a();<br>    void b();<br>    void c();<br>    void d();<br>    void e();<br>    void f();<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">适配器：Adapter</span><br></pre></td></tr></table></figure></p><p>public abstract class Adapter implements A {<br>    public void a(){}<br>    public void b(){}<br>    public void c(){}<br>    public void d(){}<br>    public void e(){}<br>    public void f(){}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">实现类：Ashili</span><br></pre></td></tr></table></figure></p><p>public class Ashili extends Adapter {<br>    public void a(){<br>        System.out.println(“实现A方法被调用”);<br>    }<br>    public void d(){<br>        System.out.println(“实现d方法被调用”);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">测试类：Clienter</span><br></pre></td></tr></table></figure></p><p>public class Clienter {</p><pre><code>public static void main(String[] args) {    A a = new Ashili();    a.a();    a.d();}</code></pre><p>}<br><code>`</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Adapter&quot;&gt;&lt;a href=&quot;#Adapter&quot; class=&quot;headerlink&quot; title=&quot;Adapter&quot;&gt;&lt;/a&gt;Adapter&lt;/h1&gt;&lt;p&gt;在安卓学习中经常碰到适配器，之前都是按照书上的代码去写，今天看了一下Java教材，发现了它的用法。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;适配器模式：将一个类的接口转换成客户希望的另一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
