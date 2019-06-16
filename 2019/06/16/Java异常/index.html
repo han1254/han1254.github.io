@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="Java异常 throws &amp;amp; throw如果方法声明后有throw语句，则在此方法被调用时，需要在调用方法中用try和catch进行异常捕获，如果不捕获异常，则需要在调用方法中使用throws语句将异常抛出。  123456789101112131415161718192021222324252627import java.util.*;public class Main &amp;#123;">
+<meta name="description" content="Java异常">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java异常">
 <meta property="og:url" content="http://yoursite.com/2019/06/16/Java异常/index.html">
 <meta property="og:site_name" content="Han1254">
-<meta property="og:description" content="Java异常 throws &amp;amp; throw如果方法声明后有throw语句，则在此方法被调用时，需要在调用方法中用try和catch进行异常捕获，如果不捕获异常，则需要在调用方法中使用throws语句将异常抛出。  123456789101112131415161718192021222324252627import java.util.*;public class Main &amp;#123;">
+<meta property="og:description" content="Java异常">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://dl2.iteye.com/upload/attachment/0120/1194/9c234fae-d8be-3479-8275-ffceee4c7b84.jpg">
-<meta property="og:updated_time" content="2019-06-16T12:12:40.373Z">
+<meta property="og:updated_time" content="2019-06-16T12:14:16.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java异常">
-<meta name="twitter:description" content="Java异常 throws &amp;amp; throw如果方法声明后有throw语句，则在此方法被调用时，需要在调用方法中用try和catch进行异常捕获，如果不捕获异常，则需要在调用方法中使用throws语句将异常抛出。  123456789101112131415161718192021222324252627import java.util.*;public class Main &amp;#123;">
+<meta name="twitter:description" content="Java异常">
 <meta name="twitter:image" content="http://dl2.iteye.com/upload/attachment/0120/1194/9c234fae-d8be-3479-8275-ffceee4c7b84.jpg">
 
 
@@ -367,7 +367,8 @@
       
 
       
-        <h1 id="Java异常"><a href="#Java异常" class="headerlink" title="Java异常"></a>Java异常</h1><ol>
+        <h1 id="Java异常"><a href="#Java异常" class="headerlink" title="Java异常"></a>Java异常</h1><a id="more"></a>
+<ol>
 <li><strong>throws &amp; throw</strong><br>如果方法声明后有throw语句，则在此方法被调用时，需要<strong>在调用方法中用try和catch进行异常捕获</strong>，如果不捕获异常，则需要在调用方法中使用throws语句将异常抛出。</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">A</span><span class="params">(<span class="keyword">int</span> a)</span><span class="keyword">throws</span> Exception,IllegalArgumentException</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(a == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"a=0,silly boy!"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(a == <span class="number">1</span>) &#123;</span><br><span class="line">			IllegalArgumentException str=<span class="keyword">new</span> IllegalArgumentException(<span class="string">"a=1, IllegalArgumentException"</span>);</span><br><span class="line">			<span class="keyword">throw</span> str;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a;</span><br><span class="line">		Scanner t = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			a = t.nextInt();</span><br><span class="line">			A(a);</span><br><span class="line">		&#125;<span class="keyword">catch</span>(IllegalArgumentException e2) &#123;</span><br><span class="line">			System.out.println(e2.toString());</span><br><span class="line">		&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">			System.out.println(e.toString());</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
