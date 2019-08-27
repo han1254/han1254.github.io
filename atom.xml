@@ -77,20 +77,17 @@
     <link href="http://yoursite.com/2019/06/21/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E2%80%94-%E5%87%BD%E6%95%B0/"/>
     <id>http://yoursite.com/2019/06/21/离散数学—-函数/</id>
     <published>2019-06-21T12:35:21.000Z</published>
-    <updated>2019-06-21T12:37:44.244Z</updated>
+    <updated>2019-08-27T12:05:25.530Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><p><img src="/2019/06/21/离散数学—-函数/函数.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p>It’s a test centence<br><a id="more"></a>  </p><p><img src="/2019/06/21/离散数学—-函数/函数.png" alt></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/06/21/离散数学—-函数/函数.png&quot; alt&gt;&lt;/p&gt;
-
-      
+      &lt;p&gt;It’s a test centence&lt;br&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="离散数学" scheme="http://yoursite.com/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
     
     
       <category term="离散数学" scheme="http://yoursite.com/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
@@ -102,7 +99,7 @@
     <link href="http://yoursite.com/2019/06/20/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB/"/>
     <id>http://yoursite.com/2019/06/20/离散数学-二元关系/</id>
     <published>2019-06-20T13:55:22.000Z</published>
-    <updated>2019-06-21T12:33:27.077Z</updated>
+    <updated>2019-08-27T12:06:28.423Z</updated>
     
     <content type="html"><![CDATA[<h1 id="离散数学二元关系思维导图"><a href="#离散数学二元关系思维导图" class="headerlink" title="离散数学二元关系思维导图"></a>离散数学二元关系思维导图</h1><a id="more"></a><p><img src="/2019/06/20/离散数学-二元关系/二元关系.png" alt></p>]]></content>
     
@@ -111,6 +108,8 @@
       &lt;h1 id=&quot;离散数学二元关系思维导图&quot;&gt;&lt;a href=&quot;#离散数学二元关系思维导图&quot; class=&quot;headerlink&quot; title=&quot;离散数学二元关系思维导图&quot;&gt;&lt;/a&gt;离散数学二元关系思维导图&lt;/h1&gt;
     
     </summary>
+    
+      <category term="离散数学" scheme="http://yoursite.com/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
     
     
       <category term="离散数学" scheme="http://yoursite.com/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
