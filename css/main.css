@@ -1944,7 +1944,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c68245;
+  background: #daff1d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2781,4 +2781,83 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background: url("/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  z-index: 1040;
+  box-shadow: inset 0 2px 6px #000;
+  background: url("/images/stars.jpg");
+  -webkit-transform: translateZ(0);
+}
+.brand {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px;
+  color: #fff;
+  background: #222;
+  border-bottom: none;
+  font-family: Android;
+}
+.brand {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px;
+  color: #fff;
+  background: rgba(153,255,34,0.133);
+  border-bottom: none;
+  font-family: Android;
+}
+.site-title {
+  FONT-WEIGHT: 600;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 36px;
+  font-size: 60px;
+  font-weight: normal;
+/* font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif; */
+  font-family: Times;
+}
+.menu {
+  background: #fff;
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: center;
+  border-radius: 25px;
+}
+.posts-expand .post-title {
+  text-align: center;
+  color: #000;
+  font-family: Times;
+  font-size: 50px;
+  word-break: break-word;
+  font-weight: 400;
+}
+.post {
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: #fff;
+}
+.post-body {
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 30px;
+  border-radius: 20px;
+  background: #fff;
+}
+code {
+  color: #e6006b;
+  background: #fff;
+  border-radius: 3px;
 }
